@@ -21,7 +21,7 @@ export function HeroSection() {
       {/* Gradient Overlay */}
       <div className="absolute inset-0 bg-gradient-to-t from-green-900/60 via-green-900/30 to-transparent"></div>
       
-      <div className="relative z-10 flex flex-col min-h-screen">
+      <div className="relative z-10 flex flex-col min-h-screen pt-20 md:pt-0">
         {/* Hero Content */}
         <main className="flex-grow flex items-center justify-center text-center px-4 sm:px-6 md:px-8">
           <div className="max-w-4xl w-full">
