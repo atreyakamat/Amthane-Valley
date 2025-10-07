@@ -77,6 +77,9 @@ const config = {
         "deep-aqua": "var(--deep-aqua)",
         "sunlit-sand": "var(--sunlit-sand)",
         "twilight-green": "var(--twilight-green)",
+        // Additional colors for the new design
+        "background-light": "#f6f8f6",
+        "background-dark": "#112111",
       },
       fontFamily: {
         sans: "var(--font-body)",

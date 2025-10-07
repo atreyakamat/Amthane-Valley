@@ -24,7 +24,7 @@
   --card-foreground: var(--forest-green);
   --popover: rgba(255, 255, 255, 0.96);
   --popover-foreground: var(--forest-green);
-  --primary: var(--forest-green);
+  --primary: #025f02;
   --primary-foreground: var(--cream-white);
   --secondary: color-mix(in oklab, var(--aqua-blue) 85%, white);
   --secondary-foreground: var(--deep-aqua);
