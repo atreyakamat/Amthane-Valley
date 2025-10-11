@@ -4,7 +4,8 @@ import Image from "next/image";
 import { Leaf, Droplets, Waves, Tent } from "lucide-react";
 import { motion } from "framer-motion";
 
-import { SectionHeading } from "@/components/ui/section-heading";
+import { SectionHeading } from "../../components/ui/section-heading";
+import { images } from "../../lib/images";
 
 const highlights = [
   {
@@ -42,11 +43,12 @@ export function AboutSection() {
           transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
         >
           <Image
-            src="/images/huts.jpg"
+            src={images.huts}
             alt="Traditional huts and poolside at Amthane Valley"
             width={720}
             height={900}
             className="h-full w-full object-cover"
+            unoptimized
           />
           <div className="absolute inset-0 bg-gradient-to-tr from-forest/40 via-transparent to-transparent" aria-hidden />
           <div className="absolute bottom-6 left-6 max-w-xs rounded-3xl bg-white/80 p-5 text-sm text-forest shadow-soft backdrop-blur">

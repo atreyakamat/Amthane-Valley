@@ -1,11 +1,12 @@
 "use client";
 import React from "react";
+import Image from "next/image";
 import { motion } from "motion/react";
 
 
 
 const transition = {
-  type: "spring",
+  type: "spring" as const,
   mass: 0.5,
   damping: 11.5,
   stiffness: 100,
@@ -90,7 +91,7 @@ export const ProductItem = ({
 }) => {
   return (
     <a href={href} className="flex space-x-2">
-      <img
+      <Image
         src={src}
         width={140}
         height={70}
@@ -109,11 +110,12 @@ export const ProductItem = ({
   );
 };
 
-export const HoveredLink = ({ children, ...rest }: any) => {
+export const HoveredLink = ({ children, ...rest }: React.AnchorHTMLAttributes<HTMLAnchorElement> & { children: React.ReactNode }) => {
+  const { className, ...props } = rest;
   return (
     <a
-      {...rest}
-      className="text-neutral-700 dark:text-neutral-200 hover:text-black "
+      {...props}
+      className={"text-neutral-700 dark:text-neutral-200 hover:text-black " + (className || "")}
     >
       {children}
     </a>

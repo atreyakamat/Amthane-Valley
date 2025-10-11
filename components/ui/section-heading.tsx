@@ -1,4 +1,4 @@
-import { cn } from "@/lib/utils";
+import { cn } from "../../lib/utils";
 import { motion, type Variants } from "framer-motion";
 import type { ReactNode } from "react";
 

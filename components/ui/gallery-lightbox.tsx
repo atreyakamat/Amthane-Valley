@@ -80,6 +80,7 @@ export function GalleryLightbox({ images, children }: GalleryLightboxProps) {
                   fill
                   sizes="(min-width: 1280px) 848px, 80vw"
                   className="object-cover"
+                  unoptimized
                   priority
                 />
               </div>
@@ -145,6 +146,7 @@ export function GalleryImageTile({
         fill
         sizes="(min-width: 1024px) 320px, 45vw"
         className="object-cover transition duration-500 group-hover:scale-105"
+        unoptimized
       />
       {image.caption ? (
         <span className="absolute inset-x-3 bottom-3 rounded-full bg-black/45 px-4 py-1 text-sm text-white shadow-md backdrop-blur-sm">

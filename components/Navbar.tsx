@@ -2,9 +2,8 @@
 
 import Link from "next/link";
 import { useEffect, useState } from "react";
-import { cn } from "@/lib/utils";
-import { Menu, Phone } from "lucide-react";
-import { Button } from "@/components/ui/button";
+import { cn } from "../lib/utils";
+import { Menu } from "lucide-react";
 
 const NAV_ITEMS = [
   { label: "About", href: "#about" },
@@ -29,61 +28,56 @@ export function Navbar() {
   }, []);
 
   return (
-    <header
-      className={cn(
-        "fixed inset-x-0 top-0 z-50 transition-all duration-500",
-        isSolid
-          ? "bg-background/95 shadow-lg backdrop-blur-lg"
-          : "bg-gradient-to-b from-black/55 to-transparent"
-      )}
-    >
-      <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-4 md:px-8">
-        <Link href="#hero" className="flex items-center gap-3">
-          <div className="flex h-10 w-10 items-center justify-center rounded-full bg-forest text-cream shadow-soft">
-            <span className="text-xl font-semibold">AV</span>
-          </div>
-          <div className="hidden flex-col leading-tight text-cream sm:flex md:text-forest">
-            <span className="text-sm uppercase tracking-[0.3em]">Amthane Valley</span>
-            <span className="text-base font-semibold">Farm Retreat</span>
-          </div>
-        </Link>
-        <nav className="hidden gap-8 text-sm font-medium text-white/90 lg:flex lg:text-forest">
-          {NAV_ITEMS.map((item) => (
+    <header className="fixed inset-x-0 top-6 z-50 pointer-events-none">
+      <div className="mx-auto max-w-6xl px-4 md:px-8">
+        <div
+          className={cn(
+            "pointer-events-auto mx-auto rounded-full border shadow-lg backdrop-blur-md bg-white/8",
+            "flex items-center justify-between gap-6 px-5 py-3 transition-all duration-300",
+            isSolid ? "ring-1 ring-emerald-200/20" : "ring-0"
+          )}
+          style={{ borderColor: "rgba(28,59,42,0.15)" }}
+        >
+          <Link href="#hero" className="flex items-center gap-3">
+            <div className="flex h-10 w-10 items-center justify-center rounded-full bg-forest text-cream shadow-soft">
+              <span className="text-xl font-semibold">AV</span>
+            </div>
+          </Link>
+
+          <nav className="hidden lg:flex items-center gap-8 text-m font-medium">
+            {NAV_ITEMS.map((item) => (
+              <a
+                key={item.href}
+                href={item.href}
+                className="group relative transition text-forest/90 hover:text-forest"
+              >
+                {item.label}
+                <span className="absolute inset-x-0 -bottom-1 h-0.5 scale-x-0 rounded-full bg-forest transition-transform duration-300 group-hover:scale-x-100" />
+              </a>
+            ))}
             <a
-              key={item.href}
-              href={item.href}
-              className="group relative transition hover:text-aqua"
+              href="/book"
+              className="ml-2 hidden rounded-md bg-forest px-4 py-2 text-m font-semibold text-cream hover:bg-forest/90 lg:inline-block"
             >
-              {item.label}
-              <span className="absolute inset-x-0 -bottom-1 h-0.5 scale-x-0 rounded-full bg-aqua transition-transform duration-300 group-hover:scale-x-100" />
-            </a>
-          ))}
-        </nav>
-  <div className="hidden items-center gap-4 lg:flex">
-          <Button asChild variant="secondary" glow>
-            <a href="tel:+919850000000" className="flex items-center gap-2">
-              <Phone className="h-4 w-4" aria-hidden="true" />
-              Call Us
-            </a>
-          </Button>
-          <Button asChild>
-            <a href="https://wa.me/919850000000" target="_blank" rel="noreferrer">
               Book Your Day
             </a>
-          </Button>
-        </div>
-  <div className="flex items-center gap-3 lg:hidden">
-          <Button variant="secondary" size="icon" glow aria-label="Call Amthane Valley">
-            <Phone className="h-5 w-5" aria-hidden="true" />
-          </Button>
-          <Button
-            variant="outline"
-            size="icon"
-            className="border-white/30 text-white/90 backdrop-blur-sm md:text-forest"
-            aria-label="Open navigation"
-          >
-            <Menu className="h-5 w-5" aria-hidden="true" />
-          </Button>
+          </nav>
+
+          <div className="flex items-center gap-3">
+            <Link
+              href="/book"
+              className="inline-flex items-center gap-2 rounded-md bg-forest px-3 py-2 text-sm font-semibold text-cream lg:hidden"
+            >
+              Book Your Day
+            </Link>
+
+            <button
+              className="ml-2 inline-flex items-center justify-center rounded-full p-2 text-forest/90 hover:text-forest lg:hidden"
+              aria-label="Open menu"
+            >
+              <Menu className="h-5 w-5" aria-hidden />
+            </button>
+          </div>
         </div>
       </div>
     </header>

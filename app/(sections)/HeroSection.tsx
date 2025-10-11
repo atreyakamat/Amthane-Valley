@@ -1,21 +1,42 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Image from "next/image";
+import { allImages } from "../../lib/images";
+import { useEffect, useState } from "react";
+
+const heroImages: string[] = allImages;
 
 export function HeroSection() {
+  const [currentImage, setCurrentImage] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentImage((prev) => (prev + 1) % heroImages.length);
+    }, 5000);
+    return () => clearInterval(interval);
+  }, []);
+
   return (
     <section id="hero" className="relative min-h-screen w-full">
-      {/* Background Video */}
-      <video
-        autoPlay
-        loop
-        muted
-        className="absolute inset-0 w-full h-full object-cover -z-10"
-        data-alt="A lush scene of coconut trees and serene pools at a luxury nature farm."
-      >
-        <source src="https://assets.mixkit.co/videos/preview/mixkit-top-view-of-a-coconut-tree-on-a-sunny-day-4343-large.mp4" type="video/mp4" />
-        Your browser does not support the video tag.
-      </video>
+      {/* Background Image Carousel */}
+  {heroImages.map((img: string, index: number) => (
+        <div
+          key={img}
+          className={`absolute inset-0 w-full h-full transition-opacity duration-1000 ${
+            index === currentImage ? "opacity-100" : "opacity-0"
+          }`}
+        >
+          <Image
+            src={img}
+            alt="Amthane Valley Farm"
+            fill
+            className="object-cover"
+            priority={index === 0}
+            unoptimized
+          />
+        </div>
+      ))}
       
       {/* Gradient Overlay */}
       <div className="absolute inset-0 bg-gradient-to-t from-green-900/50 to-transparent"></div>

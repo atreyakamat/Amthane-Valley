@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import { Inter, Playfair_Display } from "next/font/google";
 import "./globals.css";
+import { images } from "../lib/images";
 
 const bodyFont = Inter({
   subsets: ["latin"],
@@ -49,21 +50,21 @@ export const metadata: Metadata = {
     siteName: "Amthane Valley Farm",
     type: "website",
     locale: "en_IN",
-    images: [
-      {
-        url: "/images/og/thumbnail.jpg",
-        width: 1200,
-        height: 630,
-        alt: "Amthane Valley Farm poolside and coconut groves",
-      },
-    ],
+      images: [
+        {
+          url: images.ogThumbnail,
+          width: 1200,
+          height: 630,
+          alt: "Amthane Valley Farm poolside and coconut groves",
+        },
+      ],
   },
   twitter: {
     card: "summary_large_image",
     title: "Amthane Valley Farm – Nature Meets Comfort | Goa",
     description:
       "A lush Goan farm beside Amthane Dam with pools, huts, and event spaces for unforgettable day bookings.",
-    images: ["/images/og/thumbnail.jpg"],
+  images: [images.ogThumbnail],
   },
   robots: {
     index: true,

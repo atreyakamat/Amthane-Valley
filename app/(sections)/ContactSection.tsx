@@ -7,8 +7,8 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { motion } from "framer-motion";
 import { CalendarDays, Users, Sparkles } from "lucide-react";
 
-import { Button } from "@/components/ui/button";
-import { SectionHeading } from "@/components/ui/section-heading";
+import { Button } from "../../components/ui/button";
+import { SectionHeading } from "../../components/ui/section-heading";
 
 const contactSchema = z.object({
   name: z.string().min(2, "Please tell us your name"),

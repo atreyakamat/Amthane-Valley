@@ -2,9 +2,9 @@
 
 import { Droplets, Waves, BedDouble, Hotel, UsersRound, TreePalm, TentTree, Trees } from "lucide-react";
 
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { SectionHeading } from "@/components/ui/section-heading";
-import { ScrollReveal } from "@/components/ScrollReveal";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "../../components/ui/card";
+import { SectionHeading } from "../../components/ui/section-heading";
+import { ScrollReveal } from "../../components/ScrollReveal";
 
 const facilities = [
   {

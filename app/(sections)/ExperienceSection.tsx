@@ -7,35 +7,20 @@ import { useCallback, useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import { CalendarHeart, ChevronLeft, ChevronRight } from "lucide-react";
 
-import { Button } from "@/components/ui/button";
-import { SectionHeading } from "@/components/ui/section-heading";
+import { Button } from "../../components/ui/button";
+import { SectionHeading } from "../../components/ui/section-heading";
+import { images } from "../../lib/images";
 
 const experiences = [
-  {
-    title: "Family Gatherings",
-    description: "Games on the lawn, music in the huts, and laughter over shared platters.",
-    image: "/images/events/family-day.jpg",
-  },
-  {
-    title: "Pool Parties",
-    description: "Floaties, cocktails, and sunsets that blush over the dam.",
-    image: "/images/pool.jpg",
-  },
-  {
-    title: "Birthday Brunches",
-    description: "Curated decor with live grills and dessert under the palms.",
-    image: "/images/events/birthday.jpg",
-  },
-  {
-    title: "Nature Walks",
-    description: "Guided coconut plantation strolls leading to the Amthane Dam edge.",
-    image: "/images/dam-view.jpg",
-  },
-  {
-    title: "Pre-wedding Shoots",
-    description: "Golden light, serene waters, and soulful backdrops for forever moments.",
-    image: "/images/events/prewedding.jpg",
-  },
+  { title: "Family Gatherings", description: "Games on the lawn, music in the huts, and laughter over shared platters.", image: images.events.familyDay },
+  { title: "Pool Parties", description: "Floaties, cocktails, and sunsets that blush over the dam.", image: images.pool },
+  { title: "Birthday Brunches", description: "Curated decor with live grills and dessert under the palms.", image: images.events.birthday },
+  { title: "Nature Walks", description: "Guided coconut plantation strolls leading to the Amthane Dam edge.", image: images.damView },
+  { title: "Pre-wedding Shoots", description: "Golden light, serene waters, and soulful backdrops for forever moments.", image: images.events.prewedding },
+  { title: "Relaxation Retreats", description: "Cozy rooms and hammocks for complete relaxation.", image: images.rooms },
+  { title: "Coconut Grove Tours", description: "Walk through lush coconut plantations with local guides.", image: images.coconutTrees },
+  { title: "Traditional Huts", description: "Experience authentic Goan hospitality in our grass huts.", image: images.huts },
+  { title: "Candid Moments", description: "Capture unforgettable memories in our scenic spots.", image: images.misc.sara },
 ];
 
 export function ExperienceSection() {
@@ -86,6 +71,7 @@ export function ExperienceSection() {
                       fill
                       className="object-cover"
                       sizes="(min-width: 1024px) 600px, 80vw"
+                      unoptimized
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/45 via-black/15 to-transparent" aria-hidden />
                     <motion.div
