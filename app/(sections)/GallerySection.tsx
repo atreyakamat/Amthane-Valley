@@ -65,7 +65,7 @@ export function GallerySection() {
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 auto-rows-[200px] gap-4">
           {galleryImages.map((image, index) => (
             <motion.div
-              key={image.src}
+              key={`gallery-${index}-${image.src}`}
               className={`${image.span} group relative overflow-hidden rounded-2xl cursor-pointer bg-cream-soft/80 shadow-soft hover:shadow-leaf transition-all duration-300`}
               initial={{ opacity: 0, scale: 0.9 }}
               whileInView={{ opacity: 1, scale: 1 }}

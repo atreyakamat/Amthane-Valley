@@ -22,7 +22,7 @@ export function HeroSection() {
       {/* Background Image Carousel */}
   {heroImages.map((img: string, index: number) => (
         <div
-          key={img}
+          key={`hero-${index}-${img}`}
           className={`absolute inset-0 w-full h-full transition-opacity duration-1000 ${
             index === currentImage ? "opacity-100" : "opacity-0"
           }`}
