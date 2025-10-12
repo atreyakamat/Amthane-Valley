@@ -19,7 +19,7 @@ export default function AboutPage() {
   return (
     <>
       <Navbar />
-      <div className="min-h-screen bg-background">
+      <div className="min-h-screen overflow-x-hidden bg-background">
         {/* Hero Section */}
         <section className="relative overflow-hidden bg-gradient-to-br from-forest via-forest-soft to-forest py-20 md:py-32">
           <div className="absolute inset-0 opacity-10">

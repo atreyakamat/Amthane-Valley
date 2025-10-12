@@ -1,50 +1,30 @@
 "use client";
 
 import { motion } from "framer-motion";
-import Image from "next/image";
-import { allHeroImages } from "../../lib/images";
-import { useEffect, useState } from "react";
-
-const heroImages: string[] = allHeroImages;
 
 export function HeroSection() {
-  const [currentImage, setCurrentImage] = useState(0);
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentImage((prev) => (prev + 1) % heroImages.length);
-    }, 5000);
-    return () => clearInterval(interval);
-  }, []);
-
   return (
-    <section id="hero" className="relative min-h-screen w-full">
-      {/* Background Image Carousel */}
-  {heroImages.map((img: string, index: number) => (
-        <div
-          key={`hero-${index}-${img}`}
-          className={`absolute inset-0 w-full h-full transition-opacity duration-1000 ${
-            index === currentImage ? "opacity-100" : "opacity-0"
-          }`}
-        >
-          <Image
-            src={img}
-            alt="Amthane Valley Farm"
-            fill
-            className="object-cover"
-            priority={index === 0}
-            unoptimized
-          />
-        </div>
-      ))}
+    <section id="hero" className="relative min-h-screen w-full overflow-hidden">
+      {/* Background Video */}
+      <video
+        autoPlay
+        loop
+        muted
+        playsInline
+        className="absolute inset-0 h-full w-full object-cover"
+      >
+        <source src="/amthane valley.webm" type="video/webm" />
+        {/* Fallback message for browsers that don't support video */}
+        Your browser does not support the video tag.
+      </video>
       
       {/* Gradient Overlay */}
-      <div className="absolute inset-0 bg-gradient-to-t from-green-900/50 to-transparent"></div>
+      <div className="absolute inset-0 bg-gradient-to-t from-green-900/60 via-green-900/30 to-transparent"></div>
       
       <div className="relative z-10 flex flex-col min-h-screen">
         {/* Hero Content */}
-        <main className="flex-grow flex items-center justify-center text-center px-4">
-          <div className="max-w-4xl">
+        <main className="flex-grow flex items-center justify-center text-center px-4 sm:px-6 md:px-8">
+          <div className="max-w-4xl w-full">
             <motion.h1
               className="text-white text-5xl md:text-7xl font-black leading-tight tracking-tight"
               initial={{ opacity: 0, y: 30 }}

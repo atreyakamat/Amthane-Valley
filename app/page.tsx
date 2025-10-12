@@ -11,9 +11,9 @@ import { Footer } from "./(sections)/Footer";
 
 export default function Home() {
   return (
-    <div className="relative bg-background text-foreground">
+    <div className="relative overflow-x-hidden bg-background text-foreground">
       <Navbar />
-      <main className="relative">
+      <main className="relative overflow-x-hidden">
         {/* Hero Section */}
         <HeroSection />
         
