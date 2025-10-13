@@ -315,11 +315,6 @@ export default function StaysPage() {
                     </button>
                   </>
                 )}
-
-                {/* Image Counter */}
-                <div className="absolute bottom-4 left-1/2 -translate-x-1/2 rounded-full bg-black/60 px-4 py-2 text-sm text-white backdrop-blur-md">
-                  {currentImageIndex + 1} / {roomCategories[selectedRoom].images.length}
-                </div>
               </div>
 
               {/* Thumbnail Strip */}
