@@ -16,7 +16,7 @@ const headingFont = Playfair_Display({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL(process.env.NODE_ENV === 'production' ? 'https://amthanevalley.com' : 'http://localhost:3000'),
+  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || (process.env.NODE_ENV === 'production' ? 'https://amthanevalley.com' : 'http://localhost:3000')),
   title: {
     default: "Amthane Valley Farm – Nature Meets Comfort",
     template: "%s | Amthane Valley Farm",

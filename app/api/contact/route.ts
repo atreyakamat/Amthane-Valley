@@ -1,7 +1,7 @@
 import { NextResponse } from "next/server";
 import { z } from "zod";
 
-import { sendContactEmail } from "@/lib/sendMail";
+import { sendContactEmail } from "../../../lib/sendMail";
 
 const contactRequestSchema = z.object({
   name: z.string().min(2),
