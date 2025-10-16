@@ -2,22 +2,20 @@ import { useEffect, useRef, useState } from 'react';
 import { motion, useMotionValue, useAnimation, useTransform } from 'motion/react';
 import './RollingGallery.css';
 
+// Using farm WhatsApp images
 const IMGS = [
-  'https://images.unsplash.com/photo-1528181304800-259b08848526?q=80&w=3870&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-  'https://images.unsplash.com/photo-1506665531195-3566af2b4dfa?q=80&w=3870&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-  'https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?q=80&w=3456&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-  'https://images.unsplash.com/photo-1495103033382-fe343886b671?q=80&w=3870&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-  'https://images.unsplash.com/photo-1506781961370-37a89d6b3095?q=80&w=3264&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-  'https://images.unsplash.com/photo-1599576838688-8a6c11263108?q=80&w=3870&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-  'https://images.unsplash.com/photo-1494094892896-7f14a4433b7a?q=80&w=3870&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-  'https://plus.unsplash.com/premium_photo-1664910706524-e783eed89e71?q=80&w=3869&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-  'https://images.unsplash.com/photo-1503788311183-fa3bf9c4bc32?q=80&w=3870&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-  'https://images.unsplash.com/photo-1585970480901-90d6bb2a48b5?q=80&w=3774&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
+  '/images/WhatsApp Image 2025-10-14 at 08.50.32_69c5e69d.jpg',
+  '/images/WhatsApp Image 2025-10-14 at 08.50.35_4a0037eb.jpg',
+  '/images/WhatsApp Image 2025-10-14 at 08.50.35_56cbec14.jpg',
+  '/images/WhatsApp Image 2025-10-14 at 08.50.35_d5322d76.jpg',
+  '/images/WhatsApp Image 2025-10-14 at 08.50.36_0e023e9e.jpg',
+  '/images/WhatsApp Image 2025-10-14 at 08.50.38_c299a081.jpg',
+  '/images/WhatsApp Image 2025-10-14 at 08.50.38_ff177b86.jpg'
 ];
 
 const RollingGallery = ({ autoplay = false, pauseOnHover = false, images = [] }) => {
-  images = IMGS;
-  const [isScreenSizeSm, setIsScreenSizeSm] = useState(window.innerWidth <= 640);
+  images = images.length > 0 ? images : IMGS;
+  const [isScreenSizeSm, setIsScreenSizeSm] = useState(typeof window !== 'undefined' && window.innerWidth <= 640);
 
   const cylinderWidth = isScreenSizeSm ? 1100 : 1800;
   const faceCount = images.length;
@@ -60,11 +58,15 @@ const RollingGallery = ({ autoplay = false, pauseOnHover = false, images = [] })
 
   useEffect(() => {
     const handleResize = () => {
-      setIsScreenSizeSm(window.innerWidth <= 640);
+      if (typeof window !== 'undefined') {
+        setIsScreenSizeSm(window.innerWidth <= 640);
+      }
     };
 
-    window.addEventListener('resize', handleResize);
-    return () => window.removeEventListener('resize', handleResize);
+    if (typeof window !== 'undefined') {
+      window.addEventListener('resize', handleResize);
+      return () => window.removeEventListener('resize', handleResize);
+    }
   }, []);
 
   const handleMouseEnter = () => {

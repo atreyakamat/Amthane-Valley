@@ -69,6 +69,7 @@ export function ExperienceSection() {
                       fill
                       className="object-cover"
                       sizes="(min-width: 1024px) 600px, 80vw"
+                      loading="lazy"
                       unoptimized
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/45 via-black/15 to-transparent" aria-hidden />

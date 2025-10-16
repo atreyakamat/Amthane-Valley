@@ -9,6 +9,7 @@ import { CalendarDays, Users, Sparkles } from "lucide-react";
 
 import { Button } from "../../components/ui/button";
 import { SectionHeading } from "../../components/ui/section-heading";
+import { ScrollReveal } from "../../components/ScrollReveal";
 
 const contactSchema = z.object({
   name: z.string().min(2, "Please tell us your name"),
@@ -95,8 +96,9 @@ export function ContactSection() {
           description="Tell us a little about your celebration and we’ll curate the perfect day — from pools and décor to menus and music."
           align="center"
         />
-  <div className="grid gap-10 lg:grid-cols-[1.05fr_0.95fr]">
-          <motion.div
+        <div className="grid gap-10 lg:grid-cols-[1.05fr_0.95fr]">
+          <ScrollReveal>
+            <motion.div
             className="rounded-[2.5rem] bg-white/90 p-8 shadow-soft"
             initial={{ opacity: 0, x: -40 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -272,6 +274,7 @@ export function ContactSection() {
               </a>
             </Button>
           </motion.div>
+          </ScrollReveal>
         </div>
       </div>
     </section>

@@ -48,6 +48,7 @@ export function AboutSection() {
             width={720}
             height={900}
             className="h-full w-full object-cover"
+            loading="lazy"
             unoptimized
           />
           <div className="absolute inset-0 bg-gradient-to-tr from-forest/40 via-transparent to-transparent" aria-hidden />

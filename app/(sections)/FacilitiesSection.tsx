@@ -5,6 +5,7 @@ import { Droplets, Waves, BedDouble, Hotel, UsersRound, TreePalm, TentTree, Tree
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "../../components/ui/card";
 import { SectionHeading } from "../../components/ui/section-heading";
 import { ScrollReveal } from "../../components/ScrollReveal";
+import { LeafIcon } from "../../components/ui/leaf-icon";
 
 const facilities = [
   {
@@ -52,13 +53,17 @@ const facilities = [
 export function FacilitiesSection() {
   return (
     <section id="facilities" className="section-spacing bg-cream-soft/60">
-  <div className="mx-auto max-w-6xl space-y-12 px-4 md:px-8">
-        <SectionHeading
-          eyebrow="Stay & Facilities"
-          title="Spaces crafted for every mood and moment"
-          description="From sunlit pools to cozy dorms and grass huts, every space at Amthane Valley is designed to keep everyone together — yet relaxed."
-          align="center"
-        />
+      <div className="mx-auto max-w-6xl space-y-12 px-4 md:px-8">
+        <div className="flex items-center justify-center gap-4">
+          <LeafIcon className="h-8 w-8 text-forest" />
+          <SectionHeading
+            eyebrow="Stay & Facilities"
+            title="Spaces crafted for every mood and moment"
+            description="From sunlit pools to cozy dorms and grass huts, every space at Amthane Valley is designed to keep everyone together — yet relaxed."
+            align="center"
+          />
+          <LeafIcon className="h-8 w-8 rotate-180 text-forest" />
+        </div>
   <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
           {facilities.map((facility, index) => (
             <ScrollReveal key={facility.title} delay={index * 0.05}>
