@@ -3,49 +3,17 @@
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { SectionHeading } from "../../components/ui/section-heading";
-import { images, allImages } from "../../lib/images";
+import { images } from "../../lib/images";
 import { useState } from "react";
 
 const galleryImages = [
-  { src: images.coconutTrees, alt: "Coconut grove beside Amthane Valley", span: "col-span-2 row-span-2" },
-  { src: images.pool, alt: "Pool with palms", span: "col-span-1 row-span-1" },
-  { src: images.huts, alt: "Grass huts with seating", span: "col-span-1 row-span-1" },
-  { src: images.rooms, alt: "Comfortable rooms", span: "col-span-1 row-span-2" },
-  { src: images.damView, alt: "View of Amthane Dam", span: "col-span-2 row-span-1" },
-  { src: images.events.birthday, alt: "Birthday celebration", span: "col-span-1 row-span-1" },
-  { src: images.events.familyDay, alt: "Family gathering", span: "col-span-1 row-span-1" },
-  { src: images.events.prewedding, alt: "Pre-wedding shoot", span: "col-span-2 row-span-1" },
-  { src: images.misc.allen, alt: "Guest at the farm", span: "col-span-1 row-span-1" },
-  { src: images.misc.bernard, alt: "Farm landscape", span: "col-span-1 row-span-2" },
-  { src: images.misc.chelsea, alt: "Poolside event", span: "col-span-1 row-span-1" },
-  { src: images.misc.datingscout, alt: "Hut celebration", span: "col-span-2 row-span-1" },
-  { src: images.misc.fabio, alt: "Events at dusk", span: "col-span-1 row-span-1" },
-  { src: images.misc.pexels, alt: "Resort vibes", span: "col-span-1 row-span-1" },
-  { src: images.misc.sara, alt: "Couple at the farm", span: "col-span-1 row-span-2" },
-  { src: images.misc.sasha, alt: "Nature trail", span: "col-span-1 row-span-1" },
-  { src: images.misc.yuliya, alt: "Candid moments", span: "col-span-2 row-span-1" },
-  // Fallback: include any remaining images dynamically
-  ...allImages
-    .filter((src: string) => !([
-      images.coconutTrees,
-      images.pool,
-      images.huts,
-      images.rooms,
-      images.damView,
-      images.events.birthday,
-      images.events.familyDay,
-      images.events.prewedding,
-      images.misc.allen,
-      images.misc.bernard,
-      images.misc.chelsea,
-      images.misc.datingscout,
-      images.misc.fabio,
-      images.misc.pexels,
-      images.misc.sara,
-      images.misc.sasha,
-      images.misc.yuliya,
-    ] as string[]).includes(src))
-    .map((src) => ({ src, alt: "Amthane Valley", span: "col-span-1 row-span-1" })),
+  { src: images.whatsapp1, alt: "Amthane Valley Farm - Scenic view", span: "col-span-2 row-span-2" },
+  { src: images.whatsapp2, alt: "Amthane Valley Farm - Valley landscape", span: "col-span-1 row-span-1" },
+  { src: images.whatsapp3, alt: "Amthane Valley Farm - Nature", span: "col-span-1 row-span-2" },
+  { src: images.whatsapp4, alt: "Amthane Valley Farm - Greenery", span: "col-span-1 row-span-1" },
+  { src: images.whatsapp5, alt: "Amthane Valley Farm - Peaceful corner", span: "col-span-2 row-span-1" },
+  { src: images.whatsapp6, alt: "Amthane Valley Farm - Dam view", span: "col-span-1 row-span-1" },
+  { src: images.whatsapp7, alt: "Amthane Valley Farm - Experience", span: "col-span-1 row-span-1" },
 ];
 
 export function GallerySection() {

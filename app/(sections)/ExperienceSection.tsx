@@ -12,15 +12,13 @@ import { SectionHeading } from "../../components/ui/section-heading";
 import { images } from "../../lib/images";
 
 const experiences = [
-  { title: "Family Gatherings", description: "Games on the lawn, music in the huts, and laughter over shared platters.", image: images.events.familyDay },
-  { title: "Pool Parties", description: "Floaties, cocktails, and sunsets that blush over the dam.", image: images.pool },
-  { title: "Birthday Brunches", description: "Curated decor with live grills and dessert under the palms.", image: images.events.birthday },
-  { title: "Nature Walks", description: "Guided coconut plantation strolls leading to the Amthane Dam edge.", image: images.damView },
-  { title: "Pre-wedding Shoots", description: "Golden light, serene waters, and soulful backdrops for forever moments.", image: images.events.prewedding },
-  { title: "Relaxation Retreats", description: "Cozy rooms and hammocks for complete relaxation.", image: images.rooms },
-  { title: "Coconut Grove Tours", description: "Walk through lush coconut plantations with local guides.", image: images.coconutTrees },
-  { title: "Traditional Huts", description: "Experience authentic Goan hospitality in our grass huts.", image: images.huts },
-  { title: "Candid Moments", description: "Capture unforgettable memories in our scenic spots.", image: images.misc.sara },
+  { title: "Family Gatherings", description: "Games on the lawn, music in the huts, and laughter over shared platters.", image: images.whatsapp1 },
+  { title: "Pool Parties", description: "Floaties, cocktails, and sunsets that blush over the dam.", image: images.whatsapp2 },
+  { title: "Birthday Brunches", description: "Curated decor with live grills and dessert under the palms.", image: images.whatsapp3 },
+  { title: "Nature Walks", description: "Guided coconut plantation strolls leading to the Amthane Dam edge.", image: images.whatsapp4 },
+  { title: "Pre-wedding Shoots", description: "Golden light, serene waters, and soulful backdrops for forever moments.", image: images.whatsapp5 },
+  { title: "Relaxation Retreats", description: "Cozy spaces and hammocks for complete relaxation.", image: images.whatsapp6 },
+  { title: "Farm Experience", description: "Experience the authentic charm of rural Goa at Amthane Valley.", image: images.whatsapp7 },
 ];
 
 export function ExperienceSection() {

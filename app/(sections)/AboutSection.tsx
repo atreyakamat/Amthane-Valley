@@ -43,8 +43,8 @@ export function AboutSection() {
           transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
         >
           <Image
-            src={images.huts}
-            alt="Traditional huts and poolside at Amthane Valley"
+            src={images.whatsapp1}
+            alt="Amthane Valley Farm landscape"
             width={720}
             height={900}
             className="h-full w-full object-cover"
