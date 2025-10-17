@@ -1,4 +1,5 @@
 import type { Metadata, Viewport } from "next";
+import Script from "next/script";
 import { Inter, Playfair_Display } from "next/font/google";
 import "./globals.css";
 import { images } from "../lib/images";
@@ -15,8 +16,61 @@ const headingFont = Playfair_Display({
   display: "swap",
 });
 
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || (process.env.NODE_ENV === "production" ? "https://amthanevalley.com" : "http://localhost:3000");
+
+const structuredData = {
+  "@context": "https://schema.org",
+  "@type": "EventVenue",
+  name: "Amthane Valley Farm",
+  description:
+    "Experience true Goan Susegad with private day bookings at Amthane Valley Farm—complete with pools, coconut plantations, and celebratory spaces.",
+  url: siteUrl,
+  image: [`${siteUrl.replace(/\/$/, "")}${images.ogThumbnail}`],
+  telephone: "+91-9850000000",
+  sameAs: [
+    "https://maps.app.goo.gl/RNwrzaSJNArC6hQn7",
+    "https://www.instagram.com",
+    "https://www.facebook.com",
+  ],
+  address: {
+    "@type": "PostalAddress",
+    streetAddress: "Plot 12, Near Amthane Dam, Mulgao",
+    addressLocality: "Bicholim",
+    addressRegion: "Goa",
+    postalCode: "403520",
+    addressCountry: "IN",
+  },
+  geo: {
+    "@type": "GeoCoordinates",
+    latitude: 15.671026,
+    longitude: 73.905627,
+  },
+  openingHoursSpecification: {
+    "@type": "OpeningHoursSpecification",
+    dayOfWeek: [
+      "Monday",
+      "Tuesday",
+      "Wednesday",
+      "Thursday",
+      "Friday",
+      "Saturday",
+      "Sunday",
+    ],
+    opens: "09:00",
+    closes: "21:00",
+  },
+  potentialAction: {
+    "@type": "ReserveAction",
+    target: `${siteUrl.replace(/\/$/, "")}/book`,
+    result: {
+      "@type": "Reservation",
+      name: "Day Booking at Amthane Valley Farm",
+    },
+  },
+};
+
 export const metadata: Metadata = {
-  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || (process.env.NODE_ENV === 'production' ? 'https://amthanevalley.com' : 'http://localhost:3000')),
+  metadataBase: new URL(siteUrl),
   title: {
     default: "Amthane Valley Farm – Nature Meets Comfort",
     template: "%s | Amthane Valley Farm",
@@ -47,7 +101,7 @@ export const metadata: Metadata = {
     title: "Amthane Valley Farm – Nature Meets Comfort | Goa",
     description:
       "Celebrate life between coconut palms and sweetwater. Discover pools, huts, and lush lawns perfectly curated for family gatherings and events.",
-    url: "https://amthanevalley.com",
+  url: siteUrl,
     siteName: "Amthane Valley Farm",
     type: "website",
     locale: "en_IN",
@@ -96,6 +150,12 @@ export default function RootLayout({
       suppressHydrationWarning
     >
       <body className="min-h-screen bg-background text-foreground antialiased font-sans">
+        <Script
+          id="structured-data"
+          type="application/ld+json"
+          strategy="beforeInteractive"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+        />
         {children}
       </body>
     </html>
