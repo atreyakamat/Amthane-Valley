@@ -51,20 +51,26 @@ export function HeroSection() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.4, duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
             >
-              Where Nature Meets Comfort – Welcome to Amthane Valley
+              Experience True Susegad Your Perfect Farm for Day Outings in Goa
             </motion.h1>
-            
+
+            <motion.p
+              className="mt-6 text-lg text-white/90 md:text-m"
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.6, duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
+            >
+              Welcome to Amthane Valley Farm, where nature meets <span className="italic">Susegad</span>—the Goan art of unhurried joy. Discover our exclusive retreat nestled between the sweet waters of Amthane Dam and lush coconut plantations, crafted for leisurely celebrations and meaningful togetherness.
+            </motion.p>
+
             <motion.div
               className="mt-8 flex flex-col items-center gap-4"
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.75, duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
+              transition={{ delay: 0.85, duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
             >
               <button className="flex w-full sm:w-auto min-w-[200px] max-w-sm cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 px-5 bg-primary text-background-dark text-base font-bold tracking-wide hover:bg-primary/90 transition-colors">
-                <span className="truncate">Explore the Farm</span>
-              </button>
-              <button className="flex w-full sm:w-auto min-w-[200px] max-w-sm cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 px-5 bg-white/20 backdrop-blur-sm text-white text-base font-bold tracking-wide hover:bg-white/30 transition-colors">
-                <span className="truncate">Book Your Experience</span>
+                <span className="truncate">Discover Your Susegad Escape</span>
               </button>
             </motion.div>
           </div>

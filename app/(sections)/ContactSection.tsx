@@ -9,7 +9,6 @@ import { CalendarDays, Users, Sparkles } from "lucide-react";
 
 import { Button } from "../../components/ui/button";
 import { SectionHeading } from "../../components/ui/section-heading";
-import { ScrollReveal } from "../../components/ScrollReveal";
 
 const contactSchema = z.object({
   name: z.string().min(2, "Please tell us your name"),
@@ -96,8 +95,7 @@ export function ContactSection() {
           description="Tell us a little about your celebration and we’ll curate the perfect day — from pools and décor to menus and music."
           align="center"
         />
-        <div className="grid gap-10 lg:grid-cols-[1.05fr_0.95fr]">
-          <ScrollReveal>
+        <div className="grid gap-8 lg:grid-cols-[1.2fr_0.8fr]">
             <motion.div
             className="rounded-[2.5rem] bg-white/90 p-8 shadow-soft"
             initial={{ opacity: 0, x: -40 }}
@@ -257,7 +255,7 @@ export function ContactSection() {
               <p className="text-lg text-cream/85">
                 WhatsApp us for instant date checks, packages, and décor ideas. We love co-creating celebrations that feel personal and heartfelt.
               </p>
-              <div className="space-y-3 text-sm">
+              <div className="flex flex-wrap gap-3 text-sm">
                 <div className="inline-flex items-center gap-3 rounded-full bg-white/10 px-4 py-2">
                   <CalendarDays className="h-4 w-4" aria-hidden />
                   Open for day bookings • 9 AM – 9 PM
@@ -274,7 +272,6 @@ export function ContactSection() {
               </a>
             </Button>
           </motion.div>
-          </ScrollReveal>
         </div>
       </div>
     </section>

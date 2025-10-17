@@ -18,7 +18,7 @@ export function LocationSection() {
           transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
         >
           <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3829.763742769353!2d73.83961577502544!3d15.96619748472708!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bbfea4ccaa0dae5%3A0x955dd192d08d7569!2sAmthane%20Dam!5e0!3m2!1sen!2sin!4v1707040000000!5m2!1sen!2sin"
+            src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d988.5188665404033!2d73.90562684145065!3d15.671026232287847!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sin!4v1760685290750!5m2!1sen!2sin"
             width="100%"
             height="100%"
             loading="lazy"
@@ -48,13 +48,13 @@ export function LocationSection() {
               </span>
               <span className="inline-flex items-center gap-2 text-forest-muted">
                 <Navigation className="h-5 w-5" aria-hidden />
-                Coordinates: 15.9662° N, 73.8422° E
+                Coordinates: 15.6710° N, 73.9056° E
               </span>
             </div>
             <div className="mt-6 flex flex-wrap gap-3">
               <Button asChild variant="secondary">
                 <a
-                  href="https://www.google.com/maps/dir//Amthane+Dam"
+                  href="https://maps.app.goo.gl/RNwrzaSJNArC6hQn7"
                   target="_blank"
                   rel="noreferrer"
                 >

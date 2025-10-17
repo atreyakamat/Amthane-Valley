@@ -21,11 +21,11 @@ export function Footer() {
               </div>
               <div className="flex flex-col">
                 <span className="text-xs uppercase tracking-[0.3em]">Amthane Valley</span>
-                <span className="text-lg font-semibold">Farm Retreat Goa</span>
+                <span className="text-lg font-semibold">Amthane Valley Farm: Your private slice of Goan Susegad.</span>
               </div>
             </div>
             <p className="max-w-xl text-sm text-cream/80">
-              Celebrate life between palms & sweetwater. Discover a farm sanctuary designed for day bookings, heartfelt gatherings, and poolside celebrations.
+              Discover a farm sanctuary designed for day bookings, heartfelt gatherings, and poolside celebrations in the spirit of Susegad. Celebrate life between palms & sweetwater.
             </p>
             <div className="flex flex-wrap gap-4 text-sm text-cream/80">
               <span className="inline-flex items-center gap-2">

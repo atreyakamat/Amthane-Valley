@@ -12,13 +12,36 @@ import { SectionHeading } from "../../components/ui/section-heading";
 import { images } from "../../lib/images";
 
 const experiences = [
-  { title: "Family Gatherings", description: "Games on the lawn, music in the huts, and laughter over shared platters.", image: images.whatsapp1 },
-  { title: "Pool Parties", description: "Floaties, cocktails, and sunsets that blush over the dam.", image: images.whatsapp2 },
-  { title: "Birthday Brunches", description: "Curated decor with live grills and dessert under the palms.", image: images.whatsapp3 },
-  { title: "Nature Walks", description: "Guided coconut plantation strolls leading to the Amthane Dam edge.", image: images.whatsapp4 },
-  { title: "Pre-wedding Shoots", description: "Golden light, serene waters, and soulful backdrops for forever moments.", image: images.whatsapp5 },
-  { title: "Relaxation Retreats", description: "Cozy spaces and hammocks for complete relaxation.", image: images.whatsapp6 },
-  { title: "Farm Experience", description: "Experience the authentic charm of rural Goa at Amthane Valley.", image: images.whatsapp7 },
+  {
+    title: "Leisurely Birthday Celebrations",
+    description: "Host a birthday party without the rush. Enjoy a poolside brunch, a relaxed BBQ, and the freedom to celebrate at your own pace under the coconut palms.",
+    image: images.whatsapp1,
+  },
+  {
+    title: "Rejuvenating Corporate Retreats in Goa",
+    description: "Trade deadlines for birdsong. Our serene farm is the perfect venue for corporate offsites and team-building days that focus on connection and creativity.",
+    image: images.whatsapp2,
+  },
+  {
+    title: "Soulful Pre-Wedding Shoots & Gatherings",
+    description: "Capture the beginning of your journey in a place that breathes romance and tranquility. The perfect Goan backdrop for your love story.",
+    image: images.whatsapp3,
+  },
+  {
+    title: "Unhurried Family Gatherings & Picnics",
+    description: "Reconnect with loved ones the old-fashioned way. With space for everyone, our farm is the top choice for family reunions in Goa where memories are the main agenda.",
+    image: images.whatsapp4,
+  },
+  {
+    title: "Restorative Wellness & Yoga Retreats",
+    description: "Find your inner harmony amidst the melody of nature. The quiet seclusion of our valley is ideal for workshops focused on wellbeing and peace.",
+    image: images.whatsapp5,
+  },
+  {
+    title: "Authentic Goan Get-Togethers",
+    description: "Whether it&apos;s a friends&apos; reunion or a simple day out, embrace the joy of togetherness in your own private slice of the Goan countryside.",
+    image: images.whatsapp6,
+  },
 ];
 
 export function ExperienceSection() {
@@ -47,9 +70,8 @@ export function ExperienceSection() {
     <section id="experiences" className="section-spacing">
       <div className="mx-auto max-w-6xl space-y-12 px-4 md:px-8">
         <SectionHeading
-          eyebrow="Experiences"
-          title="Gather, celebrate, and create stories beside the dam"
-          description="Slide through moments captured at Amthane Valley — from sunrise yoga and pool brunches to starry night celebrations."
+          title="Celebrate the Goan Way: Occasions at Amthane Valley"
+          description="Your event, infused with the unhurried spirit of Susegad. Discover how our private farm in North Goa can transform your gathering into a cherished memory."
         />
         <div className="relative">
           <div className="overflow-hidden" ref={emblaRef}>

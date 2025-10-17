@@ -1,6 +1,6 @@
 "use client";
 
-import { Droplets, Waves, BedDouble, Hotel, UsersRound, TreePalm, TentTree, Trees } from "lucide-react";
+import { Droplets, Waves, BedDouble, UsersRound, TreePalm } from "lucide-react";
 
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "../../components/ui/card";
 import { SectionHeading } from "../../components/ui/section-heading";
@@ -9,44 +9,29 @@ import { LeafIcon } from "../../components/ui/leaf-icon";
 
 const facilities = [
   {
-    icon: Droplets,
-    title: "Natural Pool",
-    description: "Season-exclusive rain-fed pool that glistens during monsoon magic.",
+    icon: Waves,
+    title: "The Modern Pool: Your Hub of Joy",
+    description: "The heart of our farm, where lively conversations and cool dips create the perfect backdrop for a day of celebration.",
   },
   {
-    icon: Waves,
-    title: "Swimming Pool",
-    description: "Sparkling blue waters with sun loungers for leisurely afternoons.",
+    icon: Droplets,
+    title: "The Natural Pool: Monsoon Magic",
+    description: "A seasonal wonder fed by the sweet waters of Amthane Dam. Experience a swim unlike any other, enveloped by nature&apos;s harmony.",
   },
   {
     icon: BedDouble,
-    title: "3 Cozy Rooms",
-    description: "Comfort-first medium rooms perfect for families staying the night.",
-  },
-  {
-    icon: Hotel,
-    title: "2 AC Deluxe Suites",
-    description: "Air-conditioned, en-suite elegance for hosts and special guests.",
+    title: "Cozy Rooms & AC Suites: Rest & Recharge",
+    description: "For those moments of quiet retreat or an overnight stay, our rooms offer a peaceful sanctuary to extend your Susegad experience.",
   },
   {
     icon: UsersRound,
-    title: "2 Dormitories",
-    description: "Each sleeps 7 with twin washrooms — tailor-made for groups.",
-  },
-  {
-    icon: TentTree,
-    title: "Group Huts",
-    description: "Rustic pavilions for buffet spreads, live stations, and moonlit chats.",
+    title: "Group Dormitories: Togetherness Redefined",
+    description: "Our dormitories are designed for shared laughter and easy camaraderie, making them ideal for corporate teams and close-knit groups.",
   },
   {
     icon: TreePalm,
-    title: "Open Play Lawns",
-    description: "Free-flow lawns lined with palms — games, picnics, and sundowner dance floors.",
-  },
-  {
-    icon: Trees,
-    title: "Nature Trails",
-    description: "Guided walks around the dam and plantations for calm morning escapes.",
+    title: "Huts & Lawns: Unhurried Moments",
+    description: "Settle into our open-air huts for a meal, a chat, or simply to watch the world go by. The surrounding lawns are your space to play, relax, and just be.",
   },
 ];
 
@@ -57,9 +42,8 @@ export function FacilitiesSection() {
         <div className="flex items-center justify-center gap-4">
           <LeafIcon className="h-8 w-8 text-forest" />
           <SectionHeading
-            eyebrow="Stay & Facilities"
-            title="Spaces crafted for every mood and moment"
-            description="From sunlit pools to cozy dorms and grass huts, every space at Amthane Valley is designed to keep everyone together — yet relaxed."
+            title="Spaces Crafted for Your Comfort & Susegad"
+            description="From a refreshing dip in the pool to a quiet nap in a rustic hut, every facility at Amthane Valley is designed to help you and your guests unwind and connect."
             align="center"
           />
           <LeafIcon className="h-8 w-8 rotate-180 text-forest" />

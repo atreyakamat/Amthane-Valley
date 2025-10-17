@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { Leaf, Droplets, Waves, Tent } from "lucide-react";
+import { Check } from "lucide-react";
 import { motion } from "framer-motion";
 
 import { SectionHeading } from "../../components/ui/section-heading";
@@ -9,24 +9,24 @@ import { images } from "../../lib/images";
 
 const highlights = [
   {
-    icon: Leaf,
-    title: "Coconut plantations",
-    description: "Towering palms and curated gardens embrace every gathering.",
+    icon: Check,
+    title: "True Exclusivity",
+    description: "The entire farm, reserved just for your group.",
   },
   {
-    icon: Droplets,
-    title: "Sweetwater from Amthane Dam",
-    description: "Crystal-clear natural pools fed by the serene dam nearby.",
+    icon: Check,
+    title: "Pools & Plantations",
+    description: "A modern pool, a seasonal natural pool, and acres of coconut, arecanut, and cashew groves to explore.",
   },
   {
-    icon: Waves,
-    title: "Swimming & natural pools",
-    description: "Choose between our azure pool or nature-crafted monsoon pools.",
+    icon: Check,
+    title: "The Goan Way",
+    description: "Perfect for unhurried gatherings of 20-120 guests.",
   },
   {
-    icon: Tent,
-    title: "Grass huts & play lawns",
-    description: "Open-air huts, hammocks, and lawns perfect for family games.",
+    icon: Check,
+    title: "Secluded yet Accessible",
+    description: "A short scenic drive from Mapusa, North Goa.",
   },
 ];
 
@@ -58,9 +58,8 @@ export function AboutSection() {
         </motion.div>
         <div className="space-y-10">
           <SectionHeading
-            eyebrow="Our Story"
-            title="A family haven turned into Goa&apos;s favourite day retreat"
-            description="Amthane Valley began as a family getaway by the dam and grew into a sanctuary for intimate celebrations. Every corner carries stories of laughter, music, and the fragrance of coconuts in the sea breeze."
+            title="A Space Designed for Leisure, Celebration & Connection"
+            description="Amthane Valley is more than just a place; it&apos;s a feeling. Every corner here carries stories of laughter, the melody of nature, and a harmony you can only find in the Goan countryside. We are not a hotel, but your exclusive farm for the day. Whether you&apos;re planning a lively poolside party, an intimate family reunion, or a corporate retreat, we provide the perfect canvas for you to find your own Susegad."
           />
           <div className="grid gap-6 md:grid-cols-2">
             {highlights.map(({ icon: Icon, title, description }) => (
@@ -80,6 +79,23 @@ export function AboutSection() {
               </motion.div>
             ))}
           </div>
+          <motion.div
+            className="rounded-3xl bg-white/90 p-6 shadow-soft"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.4 }}
+            transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
+          >
+            <h3 className="text-2xl font-semibold text-forest">
+              Our Story: The Search for Susegad that Became Amthane Valley
+            </h3>
+            <p className="mt-4 text-sm text-forest-muted">
+              Our journey began with a simple desire: to find a piece of land where our family could experience true Goan Susegad. A place to unwind, to celebrate without a schedule, and to reconnect with nature. We found it here, by the tranquil waters of the Amthane Dam, surrounded by the rustling of palm leaves.
+            </p>
+            <p className="mt-4 text-sm text-forest-muted">
+              What started as our private haven soon became a place our friends and their families wanted to share. We realized the Susegad we had built was something special. Today, we have opened our gates to you. We&apos;ve added modern comforts, but the essence remains: Amthane Valley is an invitation to experience the Goan way of life—a life of leisure, celebration, togetherness, and unhurried joy.
+            </p>
+          </motion.div>
         </div>
       </div>
     </section>
