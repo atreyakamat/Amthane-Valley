@@ -9,38 +9,38 @@ import { CalendarHeart, ChevronLeft, ChevronRight } from "lucide-react";
 
 import { Button } from "../../components/ui/button";
 import { SectionHeading } from "../../components/ui/section-heading";
-import { images } from "../../lib/images";
+import { experienceImages } from "../../lib/images";
 
 const experiences = [
   {
     title: "Leisurely Birthday Celebrations",
     description: "Host a birthday party without the rush. Enjoy a poolside brunch, a relaxed BBQ, and the freedom to celebrate at your own pace under the coconut palms.",
-    image: images.whatsapp1,
+    image: experienceImages[0].image,
   },
   {
     title: "Rejuvenating Corporate Retreats in Goa",
     description: "Trade deadlines for birdsong. Our serene farm is the perfect venue for corporate offsites and team-building days that focus on connection and creativity.",
-    image: images.whatsapp2,
+    image: experienceImages[1].image,
   },
   {
     title: "Soulful Pre-Wedding Shoots & Gatherings",
     description: "Capture the beginning of your journey in a place that breathes romance and tranquility. The perfect Goan backdrop for your love story.",
-    image: images.whatsapp3,
+    image: experienceImages[2].image,
   },
   {
     title: "Unhurried Family Gatherings & Picnics",
     description: "Reconnect with loved ones the old-fashioned way. With space for everyone, our farm is the top choice for family reunions in Goa where memories are the main agenda.",
-    image: images.whatsapp4,
+    image: experienceImages[3].image,
   },
   {
     title: "Restorative Wellness & Yoga Retreats",
     description: "Find your inner harmony amidst the melody of nature. The quiet seclusion of our valley is ideal for workshops focused on wellbeing and peace.",
-    image: images.whatsapp5,
+    image: experienceImages[4].image,
   },
   {
     title: "Authentic Goan Get-Togethers",
     description: "Whether it&apos;s a friends&apos; reunion or a simple day out, embrace the joy of togetherness in your own private slice of the Goan countryside.",
-    image: images.whatsapp6,
+    image: experienceImages[5].image,
   },
 ];
 

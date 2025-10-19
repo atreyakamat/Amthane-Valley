@@ -7,13 +7,16 @@ import { images } from "../../lib/images";
 import { useState } from "react";
 
 const galleryImages = [
-  { src: images.whatsapp1, alt: "Amthane Valley Farm - Scenic view", span: "col-span-2 row-span-2" },
-  { src: images.whatsapp2, alt: "Amthane Valley Farm - Valley landscape", span: "col-span-1 row-span-1" },
-  { src: images.whatsapp3, alt: "Amthane Valley Farm - Nature", span: "col-span-1 row-span-2" },
-  { src: images.whatsapp4, alt: "Amthane Valley Farm - Greenery", span: "col-span-1 row-span-1" },
-  { src: images.whatsapp5, alt: "Amthane Valley Farm - Peaceful corner", span: "col-span-2 row-span-1" },
-  { src: images.whatsapp6, alt: "Amthane Valley Farm - Dam view", span: "col-span-1 row-span-1" },
-  { src: images.whatsapp7, alt: "Amthane Valley Farm - Experience", span: "col-span-1 row-span-1" },
+  { src: images.pool1, alt: "Amthane Valley Farm - Swimming Pool", span: "col-span-2 row-span-2" },
+  { src: images.lushGreen, alt: "Amthane Valley Farm - Lush Greenery", span: "col-span-1 row-span-1" },
+  { src: images.poolAesthetic1, alt: "Amthane Valley Farm - Pool with Trees", span: "col-span-1 row-span-2" },
+  { src: images.huts, alt: "Amthane Valley Farm - Huts", span: "col-span-1 row-span-1" },
+  { src: images.entranceOutside, alt: "Amthane Valley Farm - Entrance", span: "col-span-2 row-span-1" },
+  { src: images.waterLeft, alt: "Amthane Valley Farm - Water Body", span: "col-span-1 row-span-1" },
+  { src: images.ground, alt: "Amthane Valley Farm - Open Grounds", span: "col-span-1 row-span-1" },
+  { src: images.pool2, alt: "Amthane Valley Farm - Pool View", span: "col-span-1 row-span-1" },
+  { src: images.vegetation, alt: "Amthane Valley Farm - Vegetation", span: "col-span-1 row-span-1" },
+  { src: images.slidesWater, alt: "Amthane Valley Farm - Slides", span: "col-span-1 row-span-1" },
 ];
 
 export function GallerySection() {

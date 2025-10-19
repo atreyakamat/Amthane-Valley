@@ -43,7 +43,7 @@ export function AboutSection() {
           transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
         >
           <Image
-            src={images.whatsapp1}
+            src={images.entranceOutside}
             alt="Amthane Valley Farm landscape"
             width={720}
             height={900}

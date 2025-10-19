@@ -2,10 +2,10 @@
 
 import { motion } from "framer-motion";
 import Image from "next/image";
-import { allImages } from "../../lib/images";
+import { allHeroImages } from "../../lib/images";
 import { useEffect, useState } from "react";
 
-const heroImages: string[] = allImages;
+const heroImages: string[] = allHeroImages;
 
 export function HeroSection() {
   const [currentImage, setCurrentImage] = useState(0);
