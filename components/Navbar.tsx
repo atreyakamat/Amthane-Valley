@@ -8,10 +8,10 @@ import { Menu, X } from "lucide-react";
 
 const NAV_ITEMS = [
   { label: "About", href: "#about" },
-  { label: "Stay & Facilities", href: "#facilities" },
+  { label: "Rooms & Stays", href: "/stays" },
+  { label: "Facilities", href: "#facilities" },
   { label: "Experiences", href: "#experiences" },
   { label: "Gallery", href: "#gallery" },
-  { label: "Location", href: "#location" },
   { label: "Contact", href: "#contact" },
 ];
 
