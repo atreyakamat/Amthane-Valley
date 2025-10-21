@@ -55,23 +55,36 @@ export function FacilitiesSection() {
           />
           <LeafIcon className="h-8 w-8 rotate-180 text-forest" />
         </div>
-  <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
-          {facilities.map((facility, index) => (
+        
+        <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
+          {facilities.slice(0, 3).map((facility, index) => (
             <ScrollReveal key={facility.title} delay={index * 0.05}>
-              <Card className="h-full">
+              <Card className="h-full border-forest/10 bg-white/80 backdrop-blur-sm">
                 <CardHeader>
-                  <span className="inline-flex h-12 w-12 items-center justify-center rounded-2xl bg-forest/12 text-forest">
+                  <span className="inline-flex h-12 w-12 items-center justify-center rounded-2xl bg-forest/10 text-forest">
                     <facility.icon className="h-6 w-6" aria-hidden />
                   </span>
                 </CardHeader>
                 <CardContent>
-                  <CardTitle>{facility.title}</CardTitle>
-                  <CardDescription>{facility.description}</CardDescription>
+                  <CardTitle className="text-foreground">{facility.title}</CardTitle>
+                  <CardDescription className="text-foreground/70">{facility.description}</CardDescription>
                 </CardContent>
               </Card>
             </ScrollReveal>
           ))}
         </div>
+
+        {/* View All Button */}
+        <ScrollReveal delay={0.2}>
+          <div className="text-center">
+            <Button asChild size="lg" variant="outline" className="group">
+              <Link href="/facilities">
+                Explore All Facilities
+                <Waves className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+              </Link>
+            </Button>
+          </div>
+        </ScrollReveal>
 
         {/* Rooms & Stays CTA Section */}
         <ScrollReveal delay={0.3}>

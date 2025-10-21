@@ -8,12 +8,16 @@ const bodyFont = Inter({
   subsets: ["latin"],
   variable: "--font-body",
   display: "swap",
+  preload: true,
+  weight: ["400", "500", "600", "700"],
 });
 
 const headingFont = Playfair_Display({
   subsets: ["latin"],
   variable: "--font-heading",
   display: "swap",
+  preload: true,
+  weight: ["400", "500", "600", "700"],
 });
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || (process.env.NODE_ENV === "production" ? "https://amthanevalley.com" : "http://localhost:3000");
@@ -72,18 +76,38 @@ const structuredData = {
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: "Amthane Valley Farm – Nature Meets Comfort",
+    default: "Amthane Valley Farm | Private Farm Retreat in North Goa with Pool & Accommodations",
     template: "%s | Amthane Valley Farm",
   },
   description:
-    "Escape to Amthane Valley – a lush Goan farm beside the Amthane Dam with pools, huts, and event spaces perfect for day bookings.",
+    "Experience Goan Susegad at Amthane Valley Farm - Private day bookings with swimming pool, natural seasonal pool, rustic huts, lawns, accommodations & event spaces near Mapusa, Bicholim. Perfect for celebrations, corporate retreats & family gatherings in Goa.",
   keywords: [
-    "Goa farm day booking",
-    "Amthane Dam",
-    "nature venue Goa",
-    "pool farmhouse Goa",
-    "local event venue Goa",
     "Amthane Valley Farm",
+    "Goa farm stay",
+    "private farm booking Goa",
+    "farm with pool Goa",
+    "Amthane Dam",
+    "Bicholim farm",
+    "North Goa farmhouse",
+    "Mapusa farm",
+    "Goan Susegad",
+    "farm resort Goa",
+    "nature retreat Goa",
+    "coconut plantation Goa",
+    "pool farmhouse Goa",
+    "event venue Goa",
+    "corporate retreat Goa",
+    "family gathering venue Goa",
+    "birthday party venue Goa",
+    "wedding venue Goa",
+    "pre-wedding shoot location Goa",
+    "day outing Goa",
+    "private pool Goa",
+    "farm accommodation Goa",
+    "Goa countryside",
+    "team building venue Goa",
+    "farm near Mapusa",
+    "exclusive farm Goa",
   ],
   authors: [{ name: "Amthane Valley Farm" }],
   creator: "Amthane Valley Farm",
@@ -98,21 +122,21 @@ export const metadata: Metadata = {
     canonical: "https://amthanevalley.com",
   },
   openGraph: {
-    title: "Amthane Valley Farm – Nature Meets Comfort | Goa",
+    title: "Amthane Valley Farm | Private Farm Retreat in North Goa with Pool & Stays",
     description:
-      "Celebrate life between coconut palms and sweetwater. Discover pools, huts, and lush lawns perfectly curated for family gatherings and events.",
-  url: siteUrl,
+      "Celebrate life between coconut palms and sweetwater. Discover private farm bookings with swimming pools, accommodations, huts, and lush lawns perfectly curated for celebrations, corporate retreats & family gatherings in Goa.",
+    url: siteUrl,
     siteName: "Amthane Valley Farm",
     type: "website",
     locale: "en_IN",
-      images: [
-        {
-          url: images.ogThumbnail,
-          width: 1200,
-          height: 630,
-          alt: "Amthane Valley Farm poolside and coconut groves",
-        },
-      ],
+    images: [
+      {
+        url: images.ogThumbnail,
+        width: 1200,
+        height: 630,
+        alt: "Amthane Valley Farm - Swimming pool, coconut plantations, and natural landscapes in Goa",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",

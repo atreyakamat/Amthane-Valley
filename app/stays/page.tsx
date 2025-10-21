@@ -108,8 +108,27 @@ export default function StaysPage() {
         </div>
       </section>
 
-      {/* Room Cards Section */}
+      {/* Introduction Section */}
       <section className="section-spacing">
+        <div className="mx-auto max-w-4xl px-4 text-center md:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.4 }}
+            className="space-y-6"
+          >
+            <h2 className="text-3xl font-semibold text-forest md:text-4xl">
+              Find Your Perfect Retreat
+            </h2>
+            <p className="mx-auto max-w-2xl text-lg text-forest-muted">
+              Each of our accommodations is thoughtfully designed to provide comfort and tranquility. Whether you&apos;re seeking a cozy getaway, luxurious comfort, or group lodging, we have the perfect space for your needs.
+            </p>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Room Cards Section */}
+      <section className="section-spacing bg-cream-soft/40">
         <div className="mx-auto max-w-7xl px-4 md:px-8">
           <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
             {(Object.keys(roomCategories) as RoomType[]).map((roomType, index) => {
@@ -120,7 +139,7 @@ export default function StaysPage() {
                   initial={{ opacity: 0, y: 30 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
-                  className="group relative overflow-hidden rounded-[2rem] bg-white shadow-soft transition-all duration-300 hover:shadow-leaf"
+                  className="group relative mx-auto w-full max-w-md overflow-hidden rounded-[2rem] bg-white shadow-soft transition-all duration-300 hover:shadow-leaf lg:mx-0"
                 >
                   {/* Image */}
                   <div className="relative aspect-[4/3] overflow-hidden">
@@ -143,12 +162,17 @@ export default function StaysPage() {
                     <div className="absolute left-4 top-4 flex items-center justify-center rounded-full bg-forest/90 p-2 text-white backdrop-blur-sm">
                       {getRoomIcon(roomType)}
                     </div>
+
+                    {/* Image Count Indicator */}
+                    <div className="absolute bottom-4 left-4 rounded-full bg-black/60 px-3 py-1 text-xs text-white backdrop-blur-sm">
+                      {room.images.length} photos
+                    </div>
                   </div>
 
                   {/* Content */}
-                  <div className="p-6">
+                  <div className="p-6 text-center">
                     <h3 className="text-2xl font-semibold text-forest">{room.name}</h3>
-                    <p className="mt-2 text-sm text-forest-muted">{room.description}</p>
+                    <p className="mt-3 text-sm text-forest-muted">{room.description}</p>
                     
                     <div className="mt-6 flex flex-col gap-3">
                       <Button
@@ -165,11 +189,6 @@ export default function StaysPage() {
                         </a>
                       </Button>
                     </div>
-                  </div>
-
-                  {/* Image Count Indicator */}
-                  <div className="absolute bottom-[180px] left-4 rounded-full bg-black/60 px-3 py-1 text-xs text-white backdrop-blur-sm">
-                    {room.images.length} photos
                   </div>
                 </motion.div>
               );

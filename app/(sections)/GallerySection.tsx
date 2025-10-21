@@ -1,10 +1,13 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import { motion } from "framer-motion";
 import { SectionHeading } from "../../components/ui/section-heading";
+import { Button } from "../../components/ui/button";
 import { images } from "../../lib/images";
 import { useState } from "react";
+import { Camera } from "lucide-react";
 
 const galleryImages = [
   { src: images.pool1, alt: "Amthane Valley Farm - Swimming Pool", span: "col-span-2 row-span-2" },
@@ -91,6 +94,16 @@ export function GallerySection() {
             </motion.div>
           </div>
         )}
+        
+        {/* View Full Gallery Button */}
+        <div className="text-center">
+          <Button asChild size="lg" variant="outline" className="group">
+            <Link href="/gallery">
+              <Camera className="mr-2 h-4 w-4" />
+              View Full Gallery
+            </Link>
+          </Button>
+        </div>
       </div>
     </section>
   );

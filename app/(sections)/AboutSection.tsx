@@ -1,10 +1,12 @@
 "use client";
 
 import Image from "next/image";
-import { Check } from "lucide-react";
+import Link from "next/link";
+import { Check, ArrowRight } from "lucide-react";
 import { motion } from "framer-motion";
 
 import { SectionHeading } from "../../components/ui/section-heading";
+import { Button } from "../../components/ui/button";
 import { images } from "../../lib/images";
 
 const highlights = [
@@ -34,7 +36,7 @@ export function AboutSection() {
   return (
     <section id="about" className="section-spacing relative overflow-hidden">
       <div className="absolute inset-y-0 left-0 w-full max-w-sm -translate-x-1/2 rounded-full bg-aqua/10 blur-3xl" aria-hidden />
-  <div className="mx-auto grid max-w-6xl gap-16 px-4 lg:grid-cols-[1.1fr_0.9fr] md:px-8">
+      <div className="mx-auto grid max-w-6xl gap-16 px-4 lg:grid-cols-[1.1fr_0.9fr] md:px-8">
         <motion.div
           className="relative overflow-hidden rounded-[2.5rem] bg-leafy shadow-leaf"
           initial={{ opacity: 0, x: -40 }}
@@ -59,7 +61,7 @@ export function AboutSection() {
         <div className="space-y-10">
           <SectionHeading
             title="A Space Designed for Leisure, Celebration & Connection"
-            description="Amthane Valley is more than just a place; it&apos;s a feeling. Every corner here carries stories of laughter, the melody of nature, and a harmony you can only find in the Goan countryside. We are not a hotel, but your exclusive farm for the day. Whether you&apos;re planning a lively poolside party, an intimate family reunion, or a corporate retreat, we provide the perfect canvas for you to find your own Susegad."
+            description="Amthane Valley is more than just a place; it&apos;s a feeling. Every corner here carries stories of laughter, the melody of nature, and a harmony you can only find in the Goan countryside."
           />
           <div className="grid gap-6 md:grid-cols-2">
             {highlights.map(({ icon: Icon, title, description }) => (
@@ -86,15 +88,18 @@ export function AboutSection() {
             viewport={{ once: true, amount: 0.4 }}
             transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
           >
-            <h3 className="text-2xl font-semibold text-forest">
-              Our Story: The Search for Susegad that Became Amthane Valley
+            <h3 className="text-xl font-semibold text-forest">
+              The Journey to Susegad
             </h3>
-            <p className="mt-4 text-sm text-forest-muted">
-              Our journey began with a simple desire: to find a piece of land where our family could experience true Goan Susegad. A place to unwind, to celebrate without a schedule, and to reconnect with nature. We found it here, by the tranquil waters of the Amthane Dam, surrounded by the rustling of palm leaves.
+            <p className="mt-3 text-sm text-forest-muted">
+              Our journey began with a simple desire: to find a piece of land where our family could experience true Goan Susegad. What started as our private haven soon became a place our friends and families wanted to share. Today, we&apos;ve opened our gates to you, inviting you to experience the Goan way of life — a life of leisure, celebration, togetherness, and unhurried joy.
             </p>
-            <p className="mt-4 text-sm text-forest-muted">
-              What started as our private haven soon became a place our friends and their families wanted to share. We realized the Susegad we had built was something special. Today, we have opened our gates to you. We&apos;ve added modern comforts, but the essence remains: Amthane Valley is an invitation to experience the Goan way of life—a life of leisure, celebration, togetherness, and unhurried joy.
-            </p>
+            <Button asChild variant="outline" className="mt-4 group">
+              <Link href="/about">
+                Read Our Full Story
+                <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+              </Link>
+            </Button>
           </motion.div>
         </div>
       </div>

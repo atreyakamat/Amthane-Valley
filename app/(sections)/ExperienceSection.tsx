@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import useEmblaCarousel from "embla-carousel-react";
 import Autoplay from "embla-carousel-autoplay";
 import { useCallback, useEffect, useState } from "react";
@@ -127,12 +128,19 @@ export function ExperienceSection() {
                 <ChevronRight className="h-5 w-5" aria-hidden />
               </Button>
             </div>
-            <Button asChild variant="secondary" glow>
-              <a href="https://wa.me/919850000000" target="_blank" rel="noreferrer" className="flex items-center gap-2">
-                <CalendarHeart className="h-5 w-5" aria-hidden />
-                Plan your event
-              </a>
-            </Button>
+            <div className="flex items-center gap-3">
+              <Button asChild variant="outline">
+                <Link href="/experiences">
+                  View All Experiences
+                </Link>
+              </Button>
+              <Button asChild variant="secondary" glow>
+                <a href="https://wa.me/919850000000" target="_blank" rel="noreferrer" className="flex items-center gap-2">
+                  <CalendarHeart className="h-5 w-5" aria-hidden />
+                  Plan your event
+                </a>
+              </Button>
+            </div>
           </div>
         </div>
       </div>

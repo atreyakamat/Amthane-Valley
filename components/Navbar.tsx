@@ -7,12 +7,12 @@ import { cn } from "../lib/utils";
 import { Menu, X } from "lucide-react";
 
 const NAV_ITEMS = [
-  { label: "About", href: "#about" },
-  { label: "Rooms & Stays", href: "/stays" },
-  { label: "Facilities", href: "#facilities" },
-  { label: "Experiences", href: "#experiences" },
-  { label: "Gallery", href: "#gallery" },
-  { label: "Contact", href: "#contact" },
+  { label: "About", href: "/about" },
+  { label: "Stays", href: "/stays" },
+  { label: "Facilities", href: "/facilities" },
+  { label: "Experiences", href: "/experiences" },
+  { label: "Gallery", href: "/gallery" },
+  { label: "Contact", href: "/#contact" },
 ];
 
 export function Navbar() {
