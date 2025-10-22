@@ -106,7 +106,7 @@ export function FacilitiesSection() {
                     View All Rooms
                   </Link>
                 </Button>
-                <Button asChild size="lg" variant="outline" className="border-white/30 text-white hover:bg-white/10">
+                <Button asChild size="lg" variant="outline" className="border-white/30 text-black hover:bg-white/10">
                   <a href="https://wa.me/919850000000" target="_blank" rel="noreferrer">
                     Check Availability
                   </a>

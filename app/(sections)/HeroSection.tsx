@@ -49,7 +49,7 @@ export function HeroSection() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.85, duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
             >
-              <button className="flex w-full sm:w-auto min-w-[200px] max-w-sm cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 px-5 bg-primary text-background-dark text-base font-bold tracking-wide hover:bg-primary/90 transition-colors">
+              <button className="flex w-full sm:w-auto min-w-[200px] max-w-sm cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 px-5 bg-primary text-white text-base font-bold tracking-wide hover:bg-primary/90 transition-colors">
                 <span className="truncate">Discover Your Susegad Escape</span>
               </button>
             </motion.div>

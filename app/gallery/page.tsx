@@ -83,7 +83,7 @@ export default function GalleryPage() {
               These photos are just a glimpse. Book your day at Amthane Valley and create memories that will fill your own photo albums for years to come.
             </p>
             <div className="mt-8">
-              <Button asChild size="lg" variant="secondary" className="bg-white text-forest hover:bg-cream">
+              <Button asChild size="lg" variant="secondary" className="bg-white text-black hover:bg-cream">
                 <Link href="/#contact">
                   Check Availability
                 </Link>

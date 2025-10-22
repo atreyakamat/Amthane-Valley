@@ -183,7 +183,7 @@ export default function StaysPage() {
                         View Gallery ({room.images.length} photos)
                         <ChevronRight className="h-4 w-4" />
                       </Button>
-                      <Button asChild className="w-full" variant="secondary">
+                      <Button asChild className="w-full text-black" variant="secondary">
                         <a href="https://wa.me/919850000000" target="_blank" rel="noreferrer">
                           Check Availability
                         </a>
