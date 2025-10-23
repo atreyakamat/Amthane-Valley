@@ -19,7 +19,7 @@ export default function GalleryPage() {
       <Navbar />
       <div className="min-h-screen overflow-x-hidden bg-background">
         {/* Hero Section */}
-        <section className="relative overflow-hidden bg-gradient-to-br from-forest via-forest-soft to-forest py-20 md:py-32">
+        <section className="relative overflow-hidden bg-gradient-to-br from-forest via-forest-soft to-forest pt-28 pb-20 md:py-32">
           <div className="absolute inset-0 opacity-10">
             <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_50%,rgba(255,255,255,0.1),transparent_50%)]" />
             <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(255,255,255,0.08),transparent_50%)]" />
