@@ -27,27 +27,27 @@ export default function AboutPage() {
             <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(255,255,255,0.08),transparent_50%)]" />
           </div>
           
-          <div className="relative mx-auto max-w-4xl px-4 text-center md:px-8">
-            <div className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-4 py-2 text-sm font-medium uppercase tracking-[0.2em] text-white backdrop-blur-sm">
-              <Heart className="h-4 w-4" />
+          <div className="relative mx-auto max-w-4xl px-4 text-center md:px-8 flex flex-col items-center pt-10">
+            <div className="inline-flex items-center gap-2 rounded-full bg-[var(--coconut-brown)]/40 shadow-[0_4px_10px_rgba(0,0,0,0.2)] px-4 py-2 text-sm font-medium uppercase tracking-[0.2em] text-white backdrop-blur-sm">
+              <Heart className="h-4 w-4 text-pink-400 fill-pink-400" />
               Our Story
             </div>
             
-            <h1 className="mt-6 text-4xl font-bold text-white md:text-6xl">
+            <h1 className="mt-6 text-4xl font-bold text-[var(--forest-green)] md:text-6xl pt-3">
               The Journey to Susegad
             </h1>
             
-            <p className="mx-auto mt-6 max-w-2xl text-lg text-white/90 md:text-xl">
+            <p className="mx-auto mt-6 max-w-2xl text-lg text-[var(--coconut-brown)] md:text-lg pt-4">
               From a family&apos;s dream of finding peace to becoming Goa&apos;s most cherished private farm retreat — this is the story of Amthane Valley.
             </p>
           </div>
         </section>
 
         {/* Main Story Section */}
-        <section className="section-spacing">
-          <div className="mx-auto max-w-5xl space-y-12 px-4 md:px-8">
+        <section className="">
+          <div className="mx-auto max-w-5xl space-y-12 px-4 md:px-8 ">
             {/* Introduction */}
-            <div className="text-center">
+            <div className="flex flex-col items-center text-center">
               <div className="flex items-center justify-center gap-4">
                 <LeafIcon className="h-8 w-8 text-forest" />
                 <h2 className="text-3xl font-semibold text-forest md:text-4xl">
@@ -75,7 +75,7 @@ export default function AboutPage() {
               </div>
 
               <div className="flex flex-col justify-center space-y-6">
-                <div className="inline-flex items-center gap-2 rounded-full border border-forest/20 bg-forest/5 px-4 py-2 text-sm font-medium uppercase tracking-[0.2em] text-forest-soft">
+                <div className="inline-flex items-center gap-2 rounded-full border border-forest/30 bg-forest/5 px-4 py-2 text-sm font-medium uppercase tracking-[0.2em] text-forest-soft">
                   <TreePalm className="h-4 w-4" />
                   The Beginning
                 </div>
@@ -137,18 +137,18 @@ export default function AboutPage() {
             </div>
 
             {/* Our Philosophy */}
-            <div className="rounded-[2.5rem] bg-gradient-to-br from-forest to-forest-soft p-10 text-white shadow-leaf md:p-12">
+            <div className="relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen bg-[var(--coconut-brown-soft)] opacity-30 p-10 text-white shadow-leaf md:p-12">
               <div className="mx-auto max-w-3xl text-center">
                 <div className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-4 py-2 text-sm font-medium uppercase tracking-[0.2em] backdrop-blur-sm">
                   <Award className="h-4 w-4" />
                   Our Philosophy
                 </div>
                 
-                <h3 className="mt-6 text-3xl font-semibold md:text-4xl">
+                <h3 className="mt-6 pt-3 text-3xl font-semibold md:text-4xl">
                   What We Believe
                 </h3>
                 
-                <div className="mt-8 space-y-6 text-lg text-white/90">
+                <div className="mt-2 space-y-6 text-lg text-white/90">
                   <p>
                     We are not a hotel. We are not a resort. We are your private farm for the day — a canvas for your celebrations, a sanctuary for your gatherings, and a retreat for your soul.
                   </p>
@@ -164,11 +164,11 @@ export default function AboutPage() {
 
             {/* What Makes Us Special */}
             <div>
-              <div className="text-center">
+              <div className="flex flex-col items-center text-center  space-y-8">
                 <h3 className="text-3xl font-semibold text-forest md:text-4xl">
                   What Makes Amthane Valley Special
                 </h3>
-                <p className="mx-auto mt-4 max-w-2xl text-lg text-forest-muted">
+                <p className="mx-auto max-w-2xl text-lg text-[var(--forest-green-soft)]">
                   Beyond the pools and plantations, these are the elements that define the Amthane Valley experience.
                 </p>
               </div>
@@ -237,23 +237,23 @@ export default function AboutPage() {
             </div>
 
             {/* Closing Message */}
-            <div className="rounded-[2.5rem] bg-white/90 p-10 text-center shadow-soft md:p-12">
+            <div className="relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen bg-white/90 p-10 flex flex-col items-center text-center shadow-soft md:p-12">
               <h3 className="text-3xl font-semibold text-forest md:text-4xl">
                 Today, We Invite You
               </h3>
-              <p className="mx-auto mt-6 max-w-3xl text-lg text-forest-muted">
+              <p className="mx-auto mt-6 pt-3 max-w-3xl text-lg text-forest-muted">
                 What started as our private haven has become a gift we&apos;re proud to share. We&apos;ve opened our gates to you with the same warmth and spirit that made this place special for our family. Amthane Valley is an invitation to experience the Goan way of life — a life of leisure, celebration, togetherness, and unhurried joy.
               </p>
               <p className="mx-auto mt-4 max-w-3xl text-lg text-forest-muted">
                 Whether you&apos;re celebrating a milestone, reconnecting with loved ones, or simply seeking a break from the ordinary, we welcome you to find your Susegad here.
               </p>
               <div className="mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row">
-                <Button asChild size="lg">
+                <Button asChild size="lg" variant="outline">
                   <Link href="/#contact">
                     Plan Your Visit
                   </Link>
                 </Button>
-                <Button asChild size="lg" variant="outline">
+                <Button asChild size="lg" variant="outline" className="bg-[var(--coconut-brown-soft)]/40">
                   <Link href="/stays">
                     View Our Stays
                   </Link>

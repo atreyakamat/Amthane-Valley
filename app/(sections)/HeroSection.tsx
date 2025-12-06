@@ -26,7 +26,7 @@ export function HeroSection() {
         <main className="flex-grow flex items-center justify-center text-center px-4 sm:px-6 md:px-8">
           <div className="max-w-4xl w-full">
             <motion.h1
-              className="text-white text-5xl md:text-7xl font-black leading-tight tracking-tight"
+              className="text-white text-5xl md:text-7xl font-black leading-tight tracking-tight md:pt-20"
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.4, duration: 0.8, ease: [0.22, 1, 0.36, 1] }}

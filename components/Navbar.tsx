@@ -77,7 +77,7 @@ export function Navbar() {
           )}
           style={{ borderColor: "rgba(28,59,42,0.15)" }}
         >
-          <Link href="#hero" className="flex items-center gap-3">
+          <Link href="/" className="flex items-center gap-3">
             <div className="flex h-10 w-10 items-center justify-center rounded-full bg-forest text-cream shadow-soft">
               <span className="text-xl font-semibold">AV</span>
             </div>
