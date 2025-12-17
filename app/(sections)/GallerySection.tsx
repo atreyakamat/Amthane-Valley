@@ -26,7 +26,7 @@ export function GallerySection() {
   const [selectedImage, setSelectedImage] = useState<number | null>(null);
 
   return (
-    <section id="gallery" className="section-spacing">
+    <section id="gallery" className="">
       <div className="mx-auto max-w-7xl space-y-12 px-4 md:px-8">
         <SectionHeading
           eyebrow="Gallery"

@@ -64,14 +64,14 @@ export default function StaysPage() {
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(255,255,255,0.08),transparent_50%)]" />
         </div>
         
-        <div className="relative mx-auto max-w-6xl px-4 text-center md:px-8">
+        <div className="relative mx-auto max-w-4xl px-4 text-center md:px-8 flex flex-col items-center pt-10">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-4 py-2 text-sm font-medium uppercase tracking-[0.2em] text-white backdrop-blur-sm"
+            className="inline-flex items-center gap-2 rounded-full bg-[var(--coconut-brown)]/40 shadow-[0_4px_10px_rgba(0,0,0,0.2)] px-4 py-2 text-sm font-medium uppercase tracking-[0.2em] text-white backdrop-blur-sm"
           >
-            <BedDouble className="h-4 w-4" />
+            <BedDouble className="h-4 w-4 text-[var(--coconut-brown)]" />
             Accommodations
           </motion.div>
           
@@ -79,7 +79,7 @@ export default function StaysPage() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.1 }}
-            className="mt-6 text-4xl font-bold text-white md:text-6xl"
+            className="text-4xl font-bold text-[var(--forest-green)] md:text-6xl pb-3"
           >
             Our Rooms & Stays
           </motion.h1>
@@ -88,7 +88,7 @@ export default function StaysPage() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="mx-auto mt-6 max-w-2xl text-lg text-white/90 md:text-xl"
+            className="mx-auto mt-6 max-w-2xl text-lg text-[var(--coconut-brown)] md:text-xl"
           >
             Choose from our thoughtfully designed accommodations — each offering comfort, tranquility, and the perfect retreat for your Susegad experience.
           </motion.p>
@@ -109,8 +109,8 @@ export default function StaysPage() {
       </section>
 
       {/* Introduction Section */}
-      <section className="section-spacing">
-        <div className="mx-auto max-w-4xl px-4 text-center md:px-8">
+      <section className="">
+        <div className="mx-auto max-w-4xl px-4 flex flex-col items-center text-center md:px-8 mb-4">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -120,7 +120,7 @@ export default function StaysPage() {
             <h2 className="text-3xl font-semibold text-forest md:text-4xl">
               Find Your Perfect Retreat
             </h2>
-            <p className="mx-auto max-w-2xl text-lg text-forest-muted">
+            <p className="mx-auto max-w-2xl text-lg text-forest-muted leading-snug">
               Each of our accommodations is thoughtfully designed to provide comfort and tranquility. Whether you&apos;re seeking a cozy getaway, luxurious comfort, or group lodging, we have the perfect space for your needs.
             </p>
           </motion.div>
@@ -128,7 +128,7 @@ export default function StaysPage() {
       </section>
 
       {/* Room Cards Section */}
-      <section className="section-spacing bg-cream-soft/40">
+      <section className="bg-cream-soft/40">
         <div className="mx-auto max-w-7xl px-4 md:px-8">
           <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
             {(Object.keys(roomCategories) as RoomType[]).map((roomType, index) => {

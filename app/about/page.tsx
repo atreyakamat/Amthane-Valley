@@ -33,11 +33,11 @@ export default function AboutPage() {
               Our Story
             </div>
             
-            <h1 className="mt-6 text-4xl font-bold text-[var(--forest-green)] md:text-6xl pt-3">
+            <h1 className="text-4xl font-bold text-[var(--forest-green)] md:text-6xl pb-3">
               The Journey to Susegad
             </h1>
             
-            <p className="mx-auto mt-6 max-w-2xl text-lg text-[var(--coconut-brown)] md:text-lg pt-4">
+            <p className="mx-auto mt-6 max-w-2xl text-lg text-[var(--coconut-brown)] md:text-lg">
               From a family&apos;s dream of finding peace to becoming Goa&apos;s most cherished private farm retreat — this is the story of Amthane Valley.
             </p>
           </div>
@@ -50,7 +50,7 @@ export default function AboutPage() {
             <div className="flex flex-col items-center text-center">
               <div className="flex items-center justify-center gap-4">
                 <LeafIcon className="h-8 w-8 text-forest" />
-                <h2 className="text-3xl font-semibold text-forest md:text-4xl">
+                <h2 className="text-3xl font-semibold text-forest md:text-4xl mb-4">
                   A Space Designed for Leisure, Celebration & Connection
                 </h2>
                 <LeafIcon className="h-8 w-8 rotate-180 text-forest" />

@@ -299,26 +299,26 @@ export default function ExperiencesPage() {
             <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(255,255,255,0.08),transparent_50%)]" />
           </div>
           
-          <div className="relative mx-auto max-w-4xl px-4 text-center md:px-8">
-            <div className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-4 py-2 text-sm font-medium uppercase tracking-[0.2em] text-white backdrop-blur-sm">
-              <Sparkles className="h-4 w-4" />
+          <div className="relative mx-auto max-w-4xl px-4 flex flex-col items-center pt-10 text-center md:px-8">
+            <div className="inline-flex items-center gap-2 rounded-full bg-[var(--coconut-brown)]/40 shadow-[0_4px_10px_rgba(0,0,0,0.2)] px-4 py-2 text-sm font-medium uppercase tracking-[0.2em] text-white backdrop-blur-sm">
+              <Sparkles className="h-4 w-4 text-yellow-400 fill-yellow-400" />
               Experiences & Activities
             </div>
             
-            <h1 className="mt-6 text-4xl font-bold text-white md:text-6xl">
+            <h1 className="mt-6 text-4xl font-bold text-[var(--forest-green)] pb-3 md:text-6xl">
               Discover Your Susegad at Amthane Valley
             </h1>
             
-            <p className="mx-auto mt-6 max-w-2xl text-lg text-white/90 md:text-xl">
+            <p className="mx-auto mt-6 max-w-2xl text-lg text-[var(--coconut-brown)] md:text-xl">
               From adventurous nature walks to peaceful poolside relaxation, from grand celebrations to intimate moments — explore the countless ways to experience true Goan Susegad at our private farm.
             </p>
           </div>
         </section>
 
         {/* Main Experiences */}
-        <section className="section-spacing">
+        <section className="">
           <div className="mx-auto max-w-6xl space-y-20 px-4 md:px-8">
-            <div className="text-center">
+            <div className="flex flex-col items-center text-center">
               <div className="flex items-center justify-center gap-4">
                 <LeafIcon className="h-8 w-8 text-forest" />
                 <h2 className="text-3xl font-semibold text-forest md:text-4xl">
@@ -389,7 +389,7 @@ export default function ExperiencesPage() {
         {/* Seasonal Experiences */}
         <section className="section-spacing bg-cream-soft/60">
           <div className="mx-auto max-w-6xl px-4 md:px-8">
-            <div className="text-center">
+            <div className="flex flex-col items-center text-center">
               <h2 className="text-3xl font-semibold text-forest md:text-4xl">
                 Experience Every Season
               </h2>
@@ -435,7 +435,7 @@ export default function ExperiencesPage() {
         {/* Testimonials */}
         <section className="section-spacing">
           <div className="mx-auto max-w-6xl px-4 md:px-8">
-            <div className="text-center">
+            <div className="flex flex-col items-center text-center">
               <h2 className="text-3xl font-semibold text-forest md:text-4xl">
                 Guest Experiences
               </h2>
@@ -464,26 +464,26 @@ export default function ExperiencesPage() {
         </section>
 
         {/* CTA Section */}
-        <section className="section-spacing bg-gradient-to-br from-forest to-forest-soft">
+        <section className="relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen bg-white/90 p-10 flex flex-col items-center text-center shadow-soft md:p-12">
           <div className="mx-auto max-w-4xl px-4 text-center md:px-8">
-            <div className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-4 py-2 text-sm font-medium uppercase tracking-[0.2em] text-white backdrop-blur-sm">
-              <Heart className="h-4 w-4" />
+            <div className="inline-flex items-center gap-2 rounded-full bg-[var(--coconut-brown)]/40 shadow-[0_4px_10px_rgba(0,0,0,0.2)] mb-4 px-4 py-2 text-sm font-medium uppercase tracking-[0.2em] text-white backdrop-blur-sm">
+              <Heart className="h-4 w-4 text-[var(--coconut-brown)]" />
               Create Your Experience
             </div>
             
-            <h2 className="mt-6 text-3xl font-semibold text-white md:text-4xl">
+            <h2 className="mt-6 text-3xl font-semibold text-forest md:text-4xl">
               Ready to Find Your Susegad?
             </h2>
-            <p className="mx-auto mt-4 max-w-2xl text-lg text-white/90">
+            <p className="mx-auto mt-4 max-w-2xl text-lg text-forest-muted">
               Whether you&apos;re seeking adventure, celebration, or pure relaxation — Amthane Valley welcomes you to create your perfect experience.
             </p>
             <div className="mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row">
-              <Button asChild size="lg" variant="secondary" className="bg-white text-forest hover:bg-cream">
+              <Button asChild size="lg" variant="outline">
                 <Link href="/#contact">
                   Plan Your Visit
                 </Link>
               </Button>
-              <Button asChild size="lg" variant="outline" className="border-white/30 text-white hover:bg-white/10">
+              <Button asChild size="lg" variant="outline" className="bg-[var(--coconut-brown-soft)]/40">
                 <Link href="/facilities">
                   Explore Facilities
                 </Link>

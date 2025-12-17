@@ -241,26 +241,27 @@ export default function FacilitiesPage() {
             <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(255,255,255,0.08),transparent_50%)]" />
           </div>
           
-          <div className="relative mx-auto max-w-4xl px-4 text-center md:px-8">
-            <div className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-4 py-2 text-sm font-medium uppercase tracking-[0.2em] text-white backdrop-blur-sm">
-              <Star className="h-4 w-4" />
+          <div className="relative mx-auto max-w-4xl px-4 text-center md:px-8 flex flex-col items-center pt-10">
+            <div className="inline-flex items-center gap-2 rounded-full bg-[var(--coconut-brown)]/40 shadow-[0_4px_10px_rgba(0,0,0,0.2)] px-4 py-2 text-sm font-medium uppercase tracking-[0.2em] text-white backdrop-blur-sm">
+              <Star className="h-4 w-4 text-yellow-400 fill-yellow-400" />
               Facilities & Amenities
             </div>
             
-            <h1 className="mt-6 text-4xl font-bold text-white md:text-6xl">
+            <h1 className="text-4xl font-bold text-[var(--forest-green)] md:text-6xl pt-3">
               Everything You Need for the Perfect Celebration
             </h1>
             
-            <p className="mx-auto mt-6 max-w-2xl text-lg text-white/90 md:text-xl">
+            <p className="mx-auto mt-6 max-w-2xl text-lg text-[var(--coconut-brown)] md:text-lg pt-4">
               From modern swimming pools to rustic huts, professional catering to custom decorations — explore all the facilities and services that make Amthane Valley your ideal private farm retreat in Goa.
             </p>
           </div>
         </section>
 
         {/* Main Facilities */}
-        <section className="section-spacing">
-          <div className="mx-auto max-w-6xl space-y-16 px-4 md:px-8">
-            <div className="text-center">
+        <section className="">
+          <div className="mx-auto max-w-5xl space-y-12 px-4 md:px-8">
+            {/* Introduction */}
+            <div className="flex flex-col items-center text-center">
               <div className="flex items-center justify-center gap-4">
                 <LeafIcon className="h-8 w-8 text-forest" />
                 <h2 className="text-3xl font-semibold text-forest md:text-4xl">
@@ -268,7 +269,7 @@ export default function FacilitiesPage() {
                 </h2>
                 <LeafIcon className="h-8 w-8 rotate-180 text-forest" />
               </div>
-              <p className="mx-auto mt-4 max-w-2xl text-lg text-forest-muted">
+              <p className="mx-auto mt-6 max-w-3xl text-lg text-forest-muted">
                 Three unique spaces, each offering a different way to experience Amthane Valley
               </p>
             </div>
@@ -332,7 +333,7 @@ export default function FacilitiesPage() {
         {/* Services */}
         <section className="section-spacing bg-cream-soft/60">
           <div className="mx-auto max-w-6xl space-y-16 px-4 md:px-8">
-            <div className="text-center">
+            <div className="flex flex-col text-center items-center">
               <h2 className="text-3xl font-semibold text-forest md:text-4xl">
                 Complete Event Services
               </h2>
@@ -453,7 +454,7 @@ export default function FacilitiesPage() {
         {/* Amenities */}
         <section className="section-spacing">
           <div className="mx-auto max-w-6xl px-4 md:px-8">
-            <div className="text-center">
+            <div className="flex flex-col text-center items-center">
               <h2 className="text-3xl font-semibold text-forest md:text-4xl">
                 Essential Amenities
               </h2>
@@ -477,26 +478,26 @@ export default function FacilitiesPage() {
         </section>
 
         {/* CTA Section */}
-        <section className="section-spacing bg-gradient-to-br from-forest to-forest-soft">
+        <section className="relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen bg-white/90 p-10 flex flex-col items-center text-center shadow-soft md:p-12">
           <div className="mx-auto max-w-4xl px-4 text-center md:px-8">
-            <div className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-4 py-2 text-sm font-medium uppercase tracking-[0.2em] text-white backdrop-blur-sm">
-              <Clock className="h-4 w-4" />
+            <div className="inline-flex items-center gap-2 rounded-full bg-[var(--coconut-brown)]/40 shadow-[0_4px_10px_rgba(0,0,0,0.2)] px-4 py-2 text-sm font-medium uppercase tracking-[0.2em] text-white backdrop-blur-sm mb-4">
+              <Clock className="h-4 w-4 text-[var(--coconut-brown)]" />
               Ready to Book
             </div>
             
-            <h2 className="mt-6 text-3xl font-semibold text-white md:text-4xl">
+            <h2 className="text-3xl font-semibold text-forest md:text-4xl">
               Plan Your Perfect Day at Amthane Valley
             </h2>
-            <p className="mx-auto mt-4 max-w-2xl text-lg text-white/90">
+            <p className="mx-auto mt-4 max-w-2xl text-lg text-forest-muted">
               With all these facilities and services at your disposal, your celebration is guaranteed to be unforgettable. Book the entire farm for your special occasion.
             </p>
             <div className="mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row">
-              <Button asChild size="lg" variant="secondary" className="bg-white text-black hover:bg-cream">
+              <Button asChild size="lg" variant="outline">
                 <Link href="/#contact">
                   Check Availability
                 </Link>
               </Button>
-              <Button asChild size="lg" variant="outline" className="border-white/30 text-white hover:bg-white/10">
+              <Button asChild size="lg" variant="outline" className="bg-[var(--coconut-brown-soft)]/40">
                 <Link href="/stays">
                   View Accommodations
                 </Link>
