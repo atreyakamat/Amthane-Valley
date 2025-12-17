@@ -34,7 +34,7 @@ const highlights = [
 
 export function AboutSection() {
   return (
-    <section id="about" className="section-spacing relative overflow-hidden">
+    <section id="about" className=" relative overflow-hidden">
       <div className="absolute inset-y-0 left-0 w-full max-w-sm -translate-x-1/2 rounded-full bg-aqua/10 blur-3xl" aria-hidden />
       <div className="mx-auto grid max-w-6xl gap-16 px-4 lg:grid-cols-[1.1fr_0.9fr] md:px-8">
         <motion.div

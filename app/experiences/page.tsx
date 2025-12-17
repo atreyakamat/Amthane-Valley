@@ -433,7 +433,7 @@ export default function ExperiencesPage() {
         </section>
 
         {/* Testimonials */}
-        <section className="section-spacing">
+        <section className="mb-12">
           <div className="mx-auto max-w-6xl px-4 md:px-8">
             <div className="flex flex-col items-center text-center">
               <h2 className="text-3xl font-semibold text-forest md:text-4xl">

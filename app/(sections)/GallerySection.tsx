@@ -6,66 +6,111 @@ import { motion } from "framer-motion";
 import { SectionHeading } from "../../components/ui/section-heading";
 import { Button } from "../../components/ui/button";
 import { images } from "../../lib/images";
-import { useState } from "react";
+import { useRef, useState } from "react";
 import { Camera } from "lucide-react";
+import SimpleMarquee from "../../components/fancy/blocks/simple-marquee";
 
 const galleryImages = [
-  { src: images.pool1, alt: "Amthane Valley Farm - Swimming Pool", span: "col-span-2 row-span-2" },
-  { src: images.lushGreen, alt: "Amthane Valley Farm - Lush Greenery", span: "col-span-1 row-span-1" },
-  { src: images.poolAesthetic1, alt: "Amthane Valley Farm - Pool with Trees", span: "col-span-1 row-span-2" },
-  { src: images.huts, alt: "Amthane Valley Farm - Huts", span: "col-span-1 row-span-1" },
-  { src: images.entranceOutside, alt: "Amthane Valley Farm - Entrance", span: "col-span-2 row-span-1" },
-  { src: images.waterLeft, alt: "Amthane Valley Farm - Water Body", span: "col-span-1 row-span-1" },
-  { src: images.ground, alt: "Amthane Valley Farm - Open Grounds", span: "col-span-1 row-span-1" },
-  { src: images.pool2, alt: "Amthane Valley Farm - Pool View", span: "col-span-1 row-span-1" },
-  { src: images.vegetation, alt: "Amthane Valley Farm - Vegetation", span: "col-span-1 row-span-1" },
-  { src: images.slidesWater, alt: "Amthane Valley Farm - Slides", span: "col-span-1 row-span-1" },
+  { src: images.pool1, alt: "Swimming Pool" },
+  { src: images.lushGreen, alt: "Lush Greenery" },
+  { src: images.poolAesthetic1, alt: "Pool with Trees" },
+  { src: images.huts, alt: "Huts" },
+  { src: images.entranceOutside, alt: "Entrance" },
+  { src: images.waterLeft, alt: "Water Body" },
+  { src: images.ground, alt: "Open Grounds" },
+  { src: images.pool2, alt: "Pool View" },
+  { src: images.vegetation, alt: "Vegetation" },
+  { src: images.slidesWater, alt: "Slides" },
 ];
+
+const MarqueeCard = ({
+  image,
+  index,
+  onClick,
+}: {
+  image: any;
+  index: number;
+  onClick: (i: number) => void;
+}) => (
+  <motion.div
+    className="relative h-32 w-48 sm:h-40 sm:w-60 mx-3 rounded-2xl overflow-hidden cursor-pointer group"
+    initial={{ opacity: 0, scale: 0.9 }}
+    whileInView={{ opacity: 1, scale: 1 }}
+    transition={{ duration: 0.4 }}
+    onClick={() => onClick(index)}
+  >
+    <Image
+      src={image.src}
+      alt={image.alt}
+      fill
+      className="object-cover transition-transform duration-500 group-hover:scale-110"
+      unoptimized
+    />
+    <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition">
+      <p className="absolute bottom-2 left-2 text-white text-xs">
+        {image.alt}
+      </p>
+    </div>
+  </motion.div>
+);
 
 export function GallerySection() {
   const [selectedImage, setSelectedImage] = useState<number | null>(null);
+  const container = useRef<HTMLDivElement>(null);
+
+  const third = Math.ceil(galleryImages.length / 3);
+  const first = galleryImages.slice(0, third);
+  const second = galleryImages.slice(third, third * 2);
+  const last = galleryImages.slice(third * 2);
 
   return (
-    <section id="gallery" className="">
+    <section id="gallery">
       <div className="mx-auto max-w-7xl space-y-12 px-4 md:px-8">
         <SectionHeading
           eyebrow="Gallery"
           title="Glances into lush weekends at Amthane Valley"
-          description="Explore our bento gallery — curated moments across seasons, vibrant celebrations, and pockets of stillness beside the dam."
+          description="Motion-first, grid-free, and mildly irresponsible scrolling."
           align="center"
         />
-        
-        {/* Bento Masonry Grid */}
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 auto-rows-[200px] gap-4">
-          {galleryImages.map((image, index) => (
-            <motion.div
-              key={`gallery-${index}-${image.src}`}
-              className={`${image.span} group relative overflow-hidden rounded-2xl cursor-pointer bg-cream-soft/80 shadow-soft hover:shadow-leaf transition-all duration-300`}
-              initial={{ opacity: 0, scale: 0.9 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              viewport={{ once: true, amount: 0.2 }}
-              transition={{ delay: index * 0.05, duration: 0.5 }}
-              onClick={() => setSelectedImage(index)}
-            >
-              <Image
-                src={image.src}
-                alt={image.alt}
-                fill
-                className="object-cover transition-transform duration-500 group-hover:scale-110"
-                sizes="(min-width: 1024px) 400px, (min-width: 768px) 300px, 200px"
-                loading="lazy"
-                unoptimized
+
+        <div
+          ref={container}
+          className="relative flex flex-col space-y-4 overflow-hidden"
+        >
+          <SimpleMarquee direction="left" baseVelocity={8} repeat={4}>
+            {first.map((img, i) => (
+              <MarqueeCard
+                key={i}
+                image={img}
+                index={i}
+                onClick={setSelectedImage}
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                <div className="absolute bottom-4 left-4 right-4">
-                  <p className="text-white text-sm font-medium">{image.alt}</p>
-                </div>
-              </div>
-            </motion.div>
-          ))}
+            ))}
+          </SimpleMarquee>
+
+          <SimpleMarquee direction="right" baseVelocity={8} repeat={4}>
+            {second.map((img, i) => (
+              <MarqueeCard
+                key={i}
+                image={img}
+                index={i + first.length}
+                onClick={setSelectedImage}
+              />
+            ))}
+          </SimpleMarquee>
+
+          <SimpleMarquee direction="left" baseVelocity={8} repeat={4}>
+            {last.map((img, i) => (
+              <MarqueeCard
+                key={i}
+                image={img}
+                index={i + first.length + second.length}
+                onClick={setSelectedImage}
+              />
+            ))}
+          </SimpleMarquee>
         </div>
 
-        {/* Lightbox Modal */}
         {selectedImage !== null && (
           <div
             className="fixed inset-0 z-50 flex items-center justify-center bg-black/90 p-4"
@@ -94,10 +139,9 @@ export function GallerySection() {
             </motion.div>
           </div>
         )}
-        
-        {/* View Full Gallery Button */}
+
         <div className="text-center">
-          <Button asChild size="lg" variant="outline" className="group">
+          <Button asChild size="lg" variant="outline">
             <Link href="/gallery">
               <Camera className="mr-2 h-4 w-4" />
               View Full Gallery

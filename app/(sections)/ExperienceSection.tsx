@@ -68,12 +68,12 @@ export function ExperienceSection() {
   }, [emblaApi]);
 
   return (
-    <section id="experiences" className="section-spacing">
+    <section id="experiences" className="">
       <div className="mx-auto max-w-6xl space-y-12 px-4 md:px-8">
         <SectionHeading
           title="Celebrate the Goan Way: Occasions at Amthane Valley"
           description="Your event, infused with the unhurried spirit of Susegad. Discover how our private farm in North Goa can transform your gathering into a cherished memory."
-        />
+        className="text-center"/>
         <div className="relative">
           <div className="overflow-hidden" ref={emblaRef}>
             <div className="flex gap-6">

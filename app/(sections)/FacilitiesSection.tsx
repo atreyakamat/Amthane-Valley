@@ -44,7 +44,7 @@ const facilities = [
 
 export function FacilitiesSection() {
   return (
-    <section id="facilities" className="section-spacing bg-cream-soft/60">
+    <section id="facilities" className="bg-cream-soft/60">
       <div className="mx-auto max-w-6xl space-y-12 px-4 md:px-8">
         <div className="flex items-center justify-center gap-4">
           <LeafIcon className="h-8 w-8 text-forest" />

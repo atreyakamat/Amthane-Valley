@@ -87,7 +87,7 @@ export function ContactSection() {
   };
 
   return (
-    <section id="contact" className="section-spacing">
+    <section id="contact" className="mb-12">
       <div className="mx-auto max-w-6xl space-y-12 px-4 md:px-8">
         <SectionHeading
           eyebrow="Plan your day"
