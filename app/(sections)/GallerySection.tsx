@@ -10,7 +10,12 @@ import { useRef, useState } from "react";
 import { Camera } from "lucide-react";
 import SimpleMarquee from "../../components/fancy/blocks/simple-marquee";
 
-const galleryImages = [
+type GalleryImage = {
+  src: string;
+  alt: string;
+};
+
+const galleryImages: GalleryImage[] = [
   { src: images.pool1, alt: "Swimming Pool" },
   { src: images.lushGreen, alt: "Lush Greenery" },
   { src: images.poolAesthetic1, alt: "Pool with Trees" },
@@ -28,7 +33,7 @@ const MarqueeCard = ({
   index,
   onClick,
 }: {
-  image: any;
+  image: GalleryImage;
   index: number;
   onClick: (i: number) => void;
 }) => (
