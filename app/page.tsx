@@ -4,7 +4,6 @@ import { HeroSection } from "./(sections)/HeroSection";
 import { AboutSection } from "./(sections)/AboutSection";
 import { FacilitiesSection } from "./(sections)/FacilitiesSection";
 import { ExperienceSection } from "./(sections)/ExperienceSection";
-import { GallerySection } from "./(sections)/GallerySection";
 import { LocationSection } from "./(sections)/LocationSection";
 import { ContactSection } from "./(sections)/ContactSection";
 import { Footer } from "./(sections)/Footer";
