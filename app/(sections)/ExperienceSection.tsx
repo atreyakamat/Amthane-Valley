@@ -118,9 +118,10 @@ export function ExperienceSection() {
             <div className="flex items-center gap-3">
               <Button
                 size="icon"
-                variant="outline"
+                // variant="outline"
                 onClick={scrollPrev}
                 aria-label="Previous experience"
+                className="text-[var(--forest-soft)]"
               >
                 <ChevronLeft className="h-5 w-5" aria-hidden />
               </Button>
@@ -129,7 +130,7 @@ export function ExperienceSection() {
               </Button>
             </div>
             <div className="flex items-center gap-3">
-              <Button asChild variant="outline">
+              <Button asChild variant="outline"className="text-[var(--forest-soft)]">
                 <Link href="/experiences">
                   View All Experiences
                 </Link>
