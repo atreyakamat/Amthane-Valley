@@ -213,12 +213,12 @@ export default function StaysPage() {
               Book your stay at Amthane Valley and immerse yourself in the tranquil Goan countryside. Perfect for families, groups, and celebrations.
             </p>
             <div className="mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row">
-              <Button asChild size="lg">
+              <Button asChild size="lg" variant="outline" className="text-[var(--forest-soft)]">
                 <Link href="/#contact">
                   Plan Your Visit
                 </Link>
               </Button>
-              <Button asChild size="lg" variant="outline">
+              <Button asChild size="lg" variant="outline" className="bg-[var(--coconut-brown-soft)]/40">
                 <Link href="/">
                   Back to Home
                 </Link>

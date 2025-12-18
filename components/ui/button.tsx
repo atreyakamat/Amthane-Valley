@@ -16,7 +16,7 @@ const buttonVariants = cva(
         secondary:
           "bg-secondary text-secondary-foreground hover:-translate-y-0.5 hover:shadow-md",
         outline:
-          "border border-forest-soft/40 bg-white/80 text-forest-soft hover:border-forest-soft hover:bg-white",
+          "border border-forest-soft/40 bg-white/80 text-white hover:text-[var(--forest-soft)] hover:border-forest-soft hover:bg-white",
         ghost:
           "text-forest hover:text-forest-soft hover:bg-forest/10",
         link: "text-deep-aqua underline-offset-4 hover:underline",

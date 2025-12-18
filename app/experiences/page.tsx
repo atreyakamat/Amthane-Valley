@@ -478,7 +478,7 @@ export default function ExperiencesPage() {
               Whether you&apos;re seeking adventure, celebration, or pure relaxation — Amthane Valley welcomes you to create your perfect experience.
             </p>
             <div className="mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row">
-              <Button asChild size="lg" variant="outline">
+              <Button asChild size="lg" variant="outline" className="text-[var(--forest-soft)]">
                 <Link href="/#contact">
                   Plan Your Visit
                 </Link>

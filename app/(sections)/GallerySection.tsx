@@ -69,7 +69,7 @@ export function GallerySection() {
   const last = galleryImages.slice(third * 2);
 
   return (
-    <section id="gallery">
+    <section id="gallery" className="mb-15">
       <div className="mx-auto max-w-7xl space-y-12 px-4 md:px-8">
         <SectionHeading
           eyebrow="Gallery"
@@ -146,7 +146,7 @@ export function GallerySection() {
         )}
 
         <div className="text-center">
-          <Button asChild size="lg" variant="outline">
+          <Button asChild size="lg" variant="outline" className="text-[var(--forest-soft)]">
             <Link href="/gallery">
               <Camera className="mr-2 h-4 w-4" />
               View Full Gallery

@@ -45,7 +45,7 @@ export default function GalleryPage() {
         <GallerySection />
 
         {/* Additional Info */}
-        <section className="my-24 bg-cream-soft/60">
+        {/* <section className="my-24 bg-cream-soft/60">
           <div className="mx-auto max-w-4xl px-4 text-center md:px-8">
             <div className="flex flex-col items-center justify-center rounded-[2.5rem] bg-white p-10 shadow-soft">
               <div className="inline-flex h-16 w-16 items-center justify-center rounded-2xl bg-forest/10 text-forest">
@@ -71,7 +71,7 @@ export default function GalleryPage() {
               </div>
             </div>
           </div>
-        </section>
+        </section> */}
 
         {/* CTA */}
         <section className="relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen bg-white/90 p-10 flex flex-col items-center text-center shadow-soft md:p-12">

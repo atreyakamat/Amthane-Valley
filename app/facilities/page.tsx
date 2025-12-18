@@ -492,7 +492,7 @@ export default function FacilitiesPage() {
               With all these facilities and services at your disposal, your celebration is guaranteed to be unforgettable. Book the entire farm for your special occasion.
             </p>
             <div className="mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row">
-              <Button asChild size="lg" variant="outline">
+              <Button asChild size="lg" variant="outline" className="text-[var(--forest-soft)]">
                 <Link href="/#contact">
                   Check Availability
                 </Link>
