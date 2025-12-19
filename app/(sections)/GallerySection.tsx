@@ -23,7 +23,7 @@ const galleryImages: GalleryImage[] = [
   { src: images.entranceOutside, alt: "Entrance" },
   { src: images.waterLeft, alt: "Water Body" },
   { src: images.ground, alt: "Open Grounds" },
-  { src: images.pool2, alt: "Pool View" },
+  { src: images.pool4, alt: "Pool View" },
   { src: images.vegetation, alt: "Vegetation" },
   { src: images.slidesWater, alt: "Slides" },
 ];

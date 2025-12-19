@@ -12,7 +12,7 @@ const NAV_ITEMS = [
   { label: "Facilities", href: "/facilities" },
   { label: "Experiences", href: "/experiences" },
   { label: "Gallery", href: "/gallery" },
-  { label: "Contact", href: "/#contact" },
+  { label: "Contact", href: "/book" },
 ];
 
 export function Navbar() {
@@ -94,21 +94,21 @@ export function Navbar() {
                 <span className="absolute inset-x-0 -bottom-1 h-0.5 scale-x-0 rounded-full bg-forest transition-transform duration-300 group-hover:scale-x-100" />
               </a>
             ))}
-            <a
+            {/* <a
               href="/book"
               className="ml-2 hidden rounded-md bg-forest px-4 py-2 text-m font-semibold text-cream hover:bg-forest/90 lg:inline-block"
             >
               Book Your Day
-            </a>
+            </a> */}
           </nav>
 
           <div className="flex items-center gap-3">
-            <Link
+            {/* <Link
               href="/book"
               className="inline-flex items-center gap-2 rounded-md bg-forest px-3 py-2 text-sm font-semibold text-cream lg:hidden"
             >
               Book Your Day
-            </Link>
+            </Link> */}
 
             <button
               className="ml-2 inline-flex items-center justify-center rounded-full p-2 text-forest/90 hover:text-forest lg:hidden"

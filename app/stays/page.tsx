@@ -177,13 +177,12 @@ export default function StaysPage() {
                     <div className="mt-6 flex flex-col gap-3">
                       <Button
                         onClick={() => openGallery(roomType)}
-                        className="w-full justify-between"
-                        variant="outline"
+                        variant="secondary" className="bg-white text-forest border border-[var(--coconut-brown-dark)] hover:bg-cream w-full justify-between" 
                       >
                         View Gallery ({room.images.length} photos)
                         <ChevronRight className="h-4 w-4" />
                       </Button>
-                      <Button asChild className="w-full text-black" variant="secondary">
+                      <Button asChild variant="secondary" className="bg-white border border-[var(--coconut-brown-dark)] text-forest hover:bg-cream" >
                         <a href="https://wa.me/919850000000" target="_blank" rel="noreferrer">
                           Check Availability
                         </a>

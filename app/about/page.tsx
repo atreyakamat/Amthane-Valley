@@ -137,7 +137,7 @@ export default function AboutPage() {
             </div>
 
             {/* Our Philosophy */}
-            <div className="relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen bg-[var(--coconut-brown-soft)] opacity-30 p-10 text-white shadow-leaf md:p-12">
+            <div className="relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen bg-[var(--coconut-brown-dark)] opacity-50 p-10 text-white shadow-leaf md:p-12">
               <div className="mx-auto max-w-3xl text-center">
                 <div className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-4 py-2 text-sm font-medium uppercase tracking-[0.2em] backdrop-blur-sm">
                   <Award className="h-4 w-4" />
@@ -248,7 +248,7 @@ export default function AboutPage() {
                 Whether you&apos;re celebrating a milestone, reconnecting with loved ones, or simply seeking a break from the ordinary, we welcome you to find your Susegad here.
               </p>
               <div className="mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row">
-                <Button asChild size="lg" variant="outline">
+                <Button asChild size="lg" variant="secondary" className="bg-white text-forest hover:bg-cream" glow>
                   <Link href="/#contact">
                     Plan Your Visit
                   </Link>

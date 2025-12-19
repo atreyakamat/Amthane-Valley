@@ -9,6 +9,7 @@
   --forest-green: #1c3b2a;
   --forest-green-soft: #2f5a40;
   --forest-green-muted: #5c7f6e;
+  --coconut-brown-dark: #59361f;
   --coconut-brown: #6b4226;
   --coconut-brown-soft: #8a5b38;
   --cream-white: #fff8f0;
@@ -173,4 +174,14 @@ main {
 .organic-mask {
   mask-image: radial-gradient(150% 100% at 50% 0%, #000 0%, transparent 90%);
   -webkit-mask-image: radial-gradient(150% 100% at 50% 0%, #000 0%, transparent 90%);
+}
+
+/* hide scrollbar but keep scroll */
+.scrollbar-hide {
+  -ms-overflow-style: none;  /* IE + Edge */
+  scrollbar-width: none;     /* Firefox */
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;             /* Chrome, Safari */
 }

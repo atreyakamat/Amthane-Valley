@@ -55,7 +55,7 @@ export function Footer() {
                 <Link
                   aria-label="Visit our Instagram"
                   href="https://www.instagram.com"
-                  className="inline-flex h-10 w-10 items-center justify-center rounded-full bg-white/10 text-white transition hover:bg-white/20"
+                  className="inline-flex h-10 w-10 items-center justify-center rounded-full bg-white/10 text-[var(--coconut-brown)] transition hover:bg-white/20"
                   target="_blank"
                 >
                   <Instagram className="h-5 w-5" aria-hidden />
@@ -63,7 +63,7 @@ export function Footer() {
                 <Link
                   aria-label="Visit our Facebook"
                   href="https://www.facebook.com"
-                  className="inline-flex h-10 w-10 items-center justify-center rounded-full bg-white/10 text-white transition hover:bg-white/20"
+                  className="inline-flex h-10 w-10 items-center justify-center rounded-full bg-white/10 text-[var(--coconut-brown)] transition hover:bg-white/20"
                   target="_blank"
                 >
                   <Facebook className="h-5 w-5" aria-hidden />

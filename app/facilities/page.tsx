@@ -91,7 +91,7 @@ const services = [
     name: "Professional Catering Services",
     tagline: "Goan Flavors & Custom Menus",
     description: "From authentic Goan seafood to North Indian vegetarian feasts, our catering partners create memorable culinary experiences. Every meal is customized to your preferences and dietary requirements.",
-    image: images.pool2,
+    image: images.pool4,
     offerings: [
       {
         name: "Traditional Goan Cuisine",

@@ -77,7 +77,7 @@ export function FacilitiesSection() {
         {/* View All Button */}
         <ScrollReveal delay={0.2}>
           <div className="text-center">
-            <Button asChild size="lg" variant="outline" className="group">
+            <Button asChild size="lg" variant="secondary" className="bg-white text-forest hover:bg-cream" >
               <Link href="/facilities">
                 Explore All Facilities
                 <Waves className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
@@ -106,7 +106,7 @@ export function FacilitiesSection() {
                     View All Rooms
                   </Link>
                 </Button>
-                <Button asChild size="lg" variant="outline" className="border-white/30 text-black hover:bg-white/10">
+                <Button asChild size="lg" variant="outline" className="bg-[var(--coconut-brown-soft)]/40">
                   <a href="https://wa.me/919850000000" target="_blank" rel="noreferrer">
                     Check Availability
                   </a>

@@ -7,6 +7,7 @@ import { ExperienceSection } from "./(sections)/ExperienceSection";
 import { LocationSection } from "./(sections)/LocationSection";
 import { ContactSection } from "./(sections)/ContactSection";
 import { Footer } from "./(sections)/Footer";
+import { GallerySection } from "./(sections)/GallerySection";
 
 export default function Home() {
   return (
@@ -37,9 +38,9 @@ export default function Home() {
         <ExperienceSection />
         
         {/* Gallery Section with enhanced spacing */}
-        {/* <div className="bg-gradient-to-b from-background to-cream-soft/40">
+        <div className="bg-gradient-to-b from-background to-cream-soft/40">
           <GallerySection />
-        </div> */}
+        </div>
         
         {/* Location Section */}
         <LocationSection />
