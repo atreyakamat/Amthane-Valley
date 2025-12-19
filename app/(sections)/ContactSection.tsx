@@ -10,6 +10,30 @@ import { CalendarDays, Users, Sparkles } from "lucide-react";
 import { Button } from "../../components/ui/button";
 import { SectionHeading } from "../../components/ui/section-heading";
 
+import { useEffect } from "react";
+
+function CalendlyInline() {
+  useEffect(() => {
+    const script = document.createElement("script");
+    script.src = "https://assets.calendly.com/assets/external/widget.js";
+    script.async = true;
+    document.body.appendChild(script);
+
+    return () => {
+      document.body.removeChild(script);
+    };
+  }, []);
+
+  return (
+    <div
+      className="calendly-inline-widget"
+      data-url="https://calendly.com/amthanevalley462"
+      style={{ minWidth: "100%", height: "700px" }}
+    />
+  );
+}
+
+
 const contactSchema = z.object({
   name: z.string().min(2, "Please tell us your name"),
   email: z
@@ -95,154 +119,166 @@ export function ContactSection() {
           description="Tell us a little about your celebration and we’ll curate the perfect day — from pools and décor to menus and music."
           align="center"
         />
-        <div className="grid gap-8 lg:grid-cols-[1.2fr_0.8fr]">
-            <motion.div
-            className="rounded-[2.5rem] bg-white/90 p-8 shadow-soft"
-            initial={{ opacity: 0, x: -40 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true, amount: 0.5 }}
-            transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
-          >
-            <form className="grid gap-6" onSubmit={form.handleSubmit(onSubmit)}>
-              <div className="grid gap-2">
-                <label className="text-sm font-semibold text-forest" htmlFor="name">
-                  Your name *
-                </label>
-                <input
-                  id="name"
-                  type="text"
-                  {...form.register("name")}
-                  className="h-12 rounded-2xl border border-forest/15 bg-cream/60 px-4 text-forest shadow-inner focus:border-forest focus:outline-none focus:ring-2 focus:ring-aqua/30"
-                  placeholder="How should we address you?"
-                />
-                {form.formState.errors.name ? (
-                  <span className="text-sm text-red-600">{form.formState.errors.name.message}</span>
-                ) : null}
-              </div>
-              <div className="grid gap-4 md:grid-cols-2">
+        <div className="grid grid-cols-1 gap-8 lg:grid-cols-[1fr_0.5fr]">
+            {/* <motion.div
+              className="rounded-[2.5rem] bg-white/90 p-8 shadow-soft"
+              initial={{ opacity: 0, x: -40 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true, amount: 0.5 }}
+              transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
+            >
+              <form className="grid gap-6" onSubmit={form.handleSubmit(onSubmit)}>
                 <div className="grid gap-2">
-                  <label className="text-sm font-semibold text-forest" htmlFor="email">
-                    Email
+                  <label className="text-sm font-semibold text-forest" htmlFor="name">
+                    Your name *
                   </label>
                   <input
-                    id="email"
-                    type="email"
-                    {...form.register("email")}
+                    id="name"
+                    type="text"
+                    {...form.register("name")}
                     className="h-12 rounded-2xl border border-forest/15 bg-cream/60 px-4 text-forest shadow-inner focus:border-forest focus:outline-none focus:ring-2 focus:ring-aqua/30"
-                    placeholder="Optional — to share brochures"
+                    placeholder="How should we address you?"
                   />
-                  {form.formState.errors.email ? (
-                    <span className="text-sm text-red-600">{form.formState.errors.email.message}</span>
+                  {form.formState.errors.name ? (
+                    <span className="text-sm text-red-600">{form.formState.errors.name.message}</span>
                   ) : null}
                 </div>
-                <div className="grid gap-2">
-                  <label className="text-sm font-semibold text-forest" htmlFor="phone">
-                    Phone / WhatsApp
-                  </label>
-                  <input
-                    id="phone"
-                    type="tel"
-                    {...form.register("phone")}
-                    className="h-12 rounded-2xl border border-forest/15 bg-cream/60 px-4 text-forest shadow-inner focus:border-forest focus:outline-none focus:ring-2 focus:ring-aqua/30"
-                    placeholder="We’ll confirm details with you"
-                  />
-                  {form.formState.errors.phone ? (
-                    <span className="text-sm text-red-600">{form.formState.errors.phone.message}</span>
-                  ) : null}
-                </div>
-              </div>
-              <div className="grid gap-4 md:grid-cols-3">
-                <div className="grid gap-2">
-                  <label className="text-sm font-semibold text-forest" htmlFor="date">
-                    Preferred date *
-                  </label>
-                  <input
-                    id="date"
-                    type="date"
-                    {...form.register("date")}
-                    className="h-12 rounded-2xl border border-forest/15 bg-cream/60 px-4 text-forest shadow-inner focus:border-forest focus:outline-none focus:ring-2 focus:ring-aqua/30"
-                  />
-                  {form.formState.errors.date ? (
-                    <span className="text-sm text-red-600">{form.formState.errors.date.message}</span>
-                  ) : null}
-                </div>
-                <div className="grid gap-2">
-                  <label className="text-sm font-semibold text-forest" htmlFor="groupSize">
-                    Group size *
-                  </label>
-                  <div className="relative h-12">
+                <div className="grid gap-4 md:grid-cols-2">
+                  <div className="grid gap-2">
+                    <label className="text-sm font-semibold text-forest" htmlFor="email">
+                      Email
+                    </label>
                     <input
-                      id="groupSize"
-                      type="text"
-                      {...form.register("groupSize")}
-                      className="h-full w-full rounded-2xl border border-forest/15 bg-cream/60 px-4 text-forest shadow-inner focus:border-forest focus:outline-none focus:ring-2 focus:ring-aqua/30"
-                      placeholder="Approx. guests"
+                      id="email"
+                      type="email"
+                      {...form.register("email")}
+                      className="h-12 rounded-2xl border border-forest/15 bg-cream/60 px-4 text-forest shadow-inner focus:border-forest focus:outline-none focus:ring-2 focus:ring-aqua/30"
+                      placeholder="Optional — to share brochures"
                     />
-                    <Users className="pointer-events-none absolute right-4 top-1/2 h-4 w-4 -translate-y-1/2 text-forest-muted" />
+                    {form.formState.errors.email ? (
+                      <span className="text-sm text-red-600">{form.formState.errors.email.message}</span>
+                    ) : null}
                   </div>
-                  {form.formState.errors.groupSize ? (
-                    <span className="text-sm text-red-600">{form.formState.errors.groupSize.message}</span>
-                  ) : null}
+                  <div className="grid gap-2">
+                    <label className="text-sm font-semibold text-forest" htmlFor="phone">
+                      Phone / WhatsApp
+                    </label>
+                    <input
+                      id="phone"
+                      type="tel"
+                      {...form.register("phone")}
+                      className="h-12 rounded-2xl border border-forest/15 bg-cream/60 px-4 text-forest shadow-inner focus:border-forest focus:outline-none focus:ring-2 focus:ring-aqua/30"
+                      placeholder="We’ll confirm details with you"
+                    />
+                    {form.formState.errors.phone ? (
+                      <span className="text-sm text-red-600">{form.formState.errors.phone.message}</span>
+                    ) : null}
+                  </div>
+                </div>
+                <div className="grid gap-4 md:grid-cols-3">
+                  <div className="grid gap-2">
+                    <label className="text-sm font-semibold text-forest" htmlFor="date">
+                      Preferred date *
+                    </label>
+                    <input
+                      id="date"
+                      type="date"
+                      {...form.register("date")}
+                      className="h-12 rounded-2xl border border-forest/15 bg-cream/60 px-4 text-forest shadow-inner focus:border-forest focus:outline-none focus:ring-2 focus:ring-aqua/30"
+                    />
+                    {form.formState.errors.date ? (
+                      <span className="text-sm text-red-600">{form.formState.errors.date.message}</span>
+                    ) : null}
+                  </div>
+                  <div className="grid gap-2">
+                    <label className="text-sm font-semibold text-forest" htmlFor="groupSize">
+                      Group size *
+                    </label>
+                    <div className="relative h-12">
+                      <input
+                        id="groupSize"
+                        type="text"
+                        {...form.register("groupSize")}
+                        className="h-full w-full rounded-2xl border border-forest/15 bg-cream/60 px-4 text-forest shadow-inner focus:border-forest focus:outline-none focus:ring-2 focus:ring-aqua/30"
+                        placeholder="Approx. guests"
+                      />
+                      <Users className="pointer-events-none absolute right-4 top-1/2 h-4 w-4 -translate-y-1/2 text-forest-muted" />
+                    </div>
+                    {form.formState.errors.groupSize ? (
+                      <span className="text-sm text-red-600">{form.formState.errors.groupSize.message}</span>
+                    ) : null}
+                  </div>
+                  <div className="grid gap-2">
+                    <label className="text-sm font-semibold text-forest" htmlFor="occasion">
+                      Occasion *
+                    </label>
+                    <div className="relative h-12">
+                      <input
+                        id="occasion"
+                        type="text"
+                        list="occasion-suggestions"
+                        {...form.register("occasion")}
+                        className="h-full w-full rounded-2xl border border-forest/15 bg-cream/60 px-4 text-forest shadow-inner focus:border-forest focus:outline-none focus:ring-2 focus:ring-aqua/30"
+                        placeholder="What are we celebrating?"
+                      />
+                      <Sparkles className="pointer-events-none absolute right-4 top-1/2 h-4 w-4 -translate-y-1/2 text-forest-muted" />
+                      <datalist id="occasion-suggestions">
+                        {occasionSuggestions.map((option) => (
+                          <option key={option} value={option} />
+                        ))}
+                      </datalist>
+                    </div>
+                    {form.formState.errors.occasion ? (
+                      <span className="text-sm text-red-600">{form.formState.errors.occasion.message}</span>
+                    ) : null}
+                  </div>
                 </div>
                 <div className="grid gap-2">
-                  <label className="text-sm font-semibold text-forest" htmlFor="occasion">
-                    Occasion *
+                  <label className="text-sm font-semibold text-forest" htmlFor="message">
+                    Tell us more *
                   </label>
-                  <div className="relative h-12">
-                    <input
-                      id="occasion"
-                      type="text"
-                      list="occasion-suggestions"
-                      {...form.register("occasion")}
-                      className="h-full w-full rounded-2xl border border-forest/15 bg-cream/60 px-4 text-forest shadow-inner focus:border-forest focus:outline-none focus:ring-2 focus:ring-aqua/30"
-                      placeholder="What are we celebrating?"
-                    />
-                    <Sparkles className="pointer-events-none absolute right-4 top-1/2 h-4 w-4 -translate-y-1/2 text-forest-muted" />
-                    <datalist id="occasion-suggestions">
-                      {occasionSuggestions.map((option) => (
-                        <option key={option} value={option} />
-                      ))}
-                    </datalist>
-                  </div>
-                  {form.formState.errors.occasion ? (
-                    <span className="text-sm text-red-600">{form.formState.errors.occasion.message}</span>
+                  <textarea
+                    id="message"
+                    rows={5}
+                    {...form.register("message")}
+                    className="rounded-2xl border border-forest/15 bg-cream/60 px-4 py-3 text-forest shadow-inner focus:border-forest focus:outline-none focus:ring-2 focus:ring-aqua/30"
+                    placeholder="Themes, cuisine preferences, timing, any add-ons..."
+                  />
+                  {form.formState.errors.message ? (
+                    <span className="text-sm text-red-600">{form.formState.errors.message.message}</span>
                   ) : null}
                 </div>
-              </div>
-              <div className="grid gap-2">
-                <label className="text-sm font-semibold text-forest" htmlFor="message">
-                  Tell us more *
-                </label>
-                <textarea
-                  id="message"
-                  rows={5}
-                  {...form.register("message")}
-                  className="rounded-2xl border border-forest/15 bg-cream/60 px-4 py-3 text-forest shadow-inner focus:border-forest focus:outline-none focus:ring-2 focus:ring-aqua/30"
-                  placeholder="Themes, cuisine preferences, timing, any add-ons..."
-                />
-                {form.formState.errors.message ? (
-                  <span className="text-sm text-red-600">{form.formState.errors.message.message}</span>
-                ) : null}
-              </div>
-              <Button
-                type="submit"
-                size="lg"
-                glow
-                disabled={state === "loading"}
-                className="justify-center"
-              >
-                {state === "loading" ? "Sending your request…" : "Send your enquiry"}
-              </Button>
-              {message ? (
-                <p
-                  className={`text-sm ${state === "success" ? "text-forest" : "text-red-600"}`}
-                  role="status"
+                <Button
+                  type="submit"
+                  size="lg"
+                  glow
+                  disabled={state === "loading"}
+                  className="justify-center"
                 >
-                  {message}
-                </p>
-              ) : null}
-            </form>
-          </motion.div>
+                  {state === "loading" ? "Sending your request…" : "Send your enquiry"}
+                </Button>
+                {message ? (
+                  <p
+                    className={`text-sm ${state === "success" ? "text-forest" : "text-red-600"}`}
+                    role="status"
+                  >
+                    {message}
+                  </p>
+                ) : null}
+              </form>
+            </motion.div> */}
+            <motion.div
+              className="rounded-[2.5rem] bg-white/90 p-6 shadow-soft"
+              initial={{ opacity: 0, x: -40 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true, amount: 0.5 }}
+              transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
+            >
+              <div className="w-full">
+                <CalendlyInline />
+              </div>
+            </motion.div>
+
           <motion.div
             className="flex flex-col justify-between gap-8 rounded-[2.5rem] bg-forest text-cream px-8 py-10 shadow-leaf"
             initial={{ opacity: 0, x: 40 }}

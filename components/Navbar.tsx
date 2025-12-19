@@ -12,7 +12,7 @@ const NAV_ITEMS = [
   { label: "Facilities", href: "/facilities" },
   { label: "Experiences", href: "/experiences" },
   { label: "Gallery", href: "/gallery" },
-  { label: "Contact", href: "/book" },
+  { label: "Book Your Day", href: "/#contact" },
 ];
 
 export function Navbar() {
@@ -68,7 +68,7 @@ export function Navbar() {
 
   return (
     <header className="fixed inset-x-0 top-6 z-50 pointer-events-none">
-      <div className="relative mx-auto max-w-6xl px-4 md:px-8">
+      <div className="relative mx-auto max-w-4xl px-4 md:px-8">
         <div
           className={cn(
             "pointer-events-auto mx-auto rounded-full border shadow-lg backdrop-blur-md bg-white/8",
