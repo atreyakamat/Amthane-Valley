@@ -11,7 +11,7 @@ interface WhatsAppButtonProps {
 }
 
 export function WhatsAppButton({
-  phone = "+919850000000",
+  phone = "+919422740111",
   message = "Hello! I'd love to plan a day at Amthane Valley.",
   className,
 }: WhatsAppButtonProps) {

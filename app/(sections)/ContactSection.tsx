@@ -303,7 +303,7 @@ export function ContactSection() {
               </div>
             </div>
             <Button asChild size="lg" variant="secondary" glow className="bg-white text-forest">
-              <a href="https://wa.me/919850000000" target="_blank" rel="noreferrer">
+              <a href="https://wa.me/919422740111" target="_blank" rel="noreferrer">
                 Chat with us on WhatsApp
               </a>
             </Button>
