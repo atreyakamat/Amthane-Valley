@@ -29,10 +29,10 @@ export function Footer() {
             </p>
             <div className="flex flex-wrap gap-4 text-sm text-cream/80">
               <span className="inline-flex items-center gap-2">
-                <Phone className="h-4 w-4" aria-hidden /> +91 98500 00000
+                <Phone className="h-4 w-4" aria-hidden /> +91 9422740111
               </span>
               <span className="inline-flex items-center gap-2">
-                <Mail className="h-4 w-4" aria-hidden /> hello@amthanevalley.com
+                <Mail className="h-4 w-4" aria-hidden /> amthanevalley462@gmail.com
               </span>
             </div>
           </div>
