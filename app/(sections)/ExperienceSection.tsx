@@ -104,7 +104,7 @@ export function ExperienceSection() {
                       {exp.description}
                     </p>
 
-                    <div className="mt-6 flex gap-4">
+                    <div className="mt-6 flex flex-col gap-4 sm:flex-row">
                       <Button asChild variant="secondary" glow>
                         <a
                           href="https://wa.me/919850000000"
