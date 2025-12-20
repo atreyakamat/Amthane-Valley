@@ -12,24 +12,13 @@ import { SectionHeading } from "../../components/ui/section-heading";
 
 import { useEffect } from "react";
 
-function CalendlyInline() {
-  useEffect(() => {
-    const script = document.createElement("script");
-    script.src = "https://assets.calendly.com/assets/external/widget.js";
-    script.async = true;
-    document.body.appendChild(script);
+import Cal from "@calcom/embed-react";
 
-    return () => {
-      document.body.removeChild(script);
-    };
-  }, []);
-
+export default function CalEmbed() {
   return (
-    <div
-      className="calendly-inline-widget"
-      data-url="https://calendly.com/amthanevalley462"
-      style={{ minWidth: "100%", height: "700px" }}
-    />
+    <div className="cal-embed-container w-full min-h-[600px] sm:min-h-[700px]">
+      <Cal calLink="amthanevalley-hdrrmk" />
+    </div>
   );
 }
 
@@ -275,7 +264,7 @@ export function ContactSection() {
               transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
             >
               <div className="w-full">
-                <CalendlyInline />
+                <CalEmbed />
               </div>
             </motion.div>
 
