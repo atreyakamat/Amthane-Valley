@@ -35,7 +35,7 @@ const experiences = [
     icon: TreePalm,
     name: "Nature Immersion",
     tagline: "Reconnect with the Natural World",
-    description: "Step away from screens and into serenity. Walk through our coconut, arecanut, and cashew plantations. Listen to rustling leaves, chirping birds, and the gentle breeze. This is what Susegad feels like.",
+    description: "Step away from screens and into serenity. Walk through our massive coconut, arecanut, and cashew plantations. Listen to rustling leaves and the gentle breeze from Amthane Dam. This is what Susegad feels like.",
     image: images.lushGreen,
     activities: [
       {
@@ -50,7 +50,7 @@ const experiences = [
       },
       {
         name: "Flora Exploration",
-        detail: "Discover tropical plants, flowers, and medicinal herbs",
+        detail: "Discover cashews, tropical plants, and medicinal herbs",
         icon: Flower2
       },
       {
@@ -66,12 +66,12 @@ const experiences = [
     icon: Droplets,
     name: "Water Experiences",
     tagline: "Pools, Swims & Splashing Fun",
-    description: "Whether it's our modern pool or the seasonal natural pool, water is central to the Amthane Valley experience. Cool off, splash around, or simply float your worries away.",
+    description: "Whether it's our modern pool or the seasonal natural pool fed directly by the sweet water of Amthane Dam, water is central to the experience. Cool off and splash around!",
     image: images.pool1,
     activities: [
       {
-        name: "Pool Parties",
-        detail: "Host lively poolside celebrations with music and fun",
+        name: "Poolside Vibes",
+        detail: "Set up your own speakers and BBQ for a custom celebration",
         icon: PartyPopper
       },
       {

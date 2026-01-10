@@ -11,7 +11,6 @@ import {
   Waves, 
   Droplets, 
   TreePalm, 
-  Utensils, 
   Music, 
   Sparkles, 
   Check,
@@ -24,7 +23,7 @@ import {
 export const metadata: Metadata = {
   title: "Facilities & Amenities | Amthane Valley Farm",
   description:
-    "Explore our modern swimming pool, natural seasonal pool, rustic huts, lush lawns, professional catering, event spaces, and custom decoration services. Everything you need for the perfect celebration in Goa.",
+    "Explore our modern swimming pool, natural seasonal pool, rustic huts, lush lawns, plantations, and versatile event spaces. Experience the beauty of Amthane Dam in a private Goan retreat.",
 };
 
 const mainFacilities = [
@@ -86,44 +85,39 @@ const mainFacilities = [
 
 const services = [
   {
-    id: "catering",
-    icon: Utensils,
-    name: "Professional Catering Services",
-    tagline: "Goan Flavors & Custom Menus",
-    description: "From authentic Goan seafood to North Indian vegetarian feasts, our catering partners create memorable culinary experiences. Every meal is customized to your preferences and dietary requirements.",
+    id: "farm-setup",
+    icon: TreePalm,
+    name: "The Farm & DIY Setup",
+    tagline: "Your Vision, Our Natural Backdrop",
+    description: "We provide the stunning canvas — you bring the flavor. Experience our thriving plantations and the pure water of Amthane Dam, with full freedom to set up your celebration exactly how you like it.",
     image: images.pool4,
     offerings: [
       {
-        name: "Traditional Goan Cuisine",
-        details: "Fish curry rice, prawn balchão, chicken xacuti, bebinca, and more"
+        name: "Lush Plantations",
+        details: "Explore acres of coconut, arecanut, and cashew trees that define our landscape"
       },
       {
-        name: "BBQ & Grills",
-        details: "Poolside BBQ setups with meats, seafood, and vegetables"
+        name: "Dam Freshwater",
+        details: "Natural, sweet water sourced directly from the pristine Amthane Dam"
       },
       {
-        name: "Vegetarian Delights",
-        details: "Complete vegetarian menus from various cuisines"
+        name: "BYO Grill & BBQ",
+        details: "Ample space for you to set up your own BBQ grills for a poolside feast"
       },
       {
-        name: "Breakfast Spreads",
-        details: "Continental, Indian, or custom breakfast options"
+        name: "Speaker Setup",
+        details: "Guests are welcome to bring and set up their own speakers and sound systems"
       },
       {
-        name: "Snacks & Starters",
-        details: "Chaats, pakodas, kebabs, finger foods for parties"
-      },
-      {
-        name: "Beverages",
-        details: "Fresh juices, mocktails, tea/coffee setups"
+        name: "Open Catering Policy",
+        details: "Freedom to bring your own food or hire external caterers of your choice"
       }
     ],
     customization: [
-      "Customize menu to your preferences",
-      "Accommodate dietary restrictions",
-      "Flexible serving styles (buffet/plated)",
-      "Professional service staff included",
-      "Setup and cleanup handled"
+      "No restriction on external vendors",
+      "Multiple power outlets for your equipment",
+      "Spacious layouts for custom setups",
+      "Natural shade from the fruit-bearing canopy"
     ]
   },
   {
@@ -148,8 +142,7 @@ const services = [
       "Flexible timing arrangements",
       "Basic furniture and seating",
       "Electricity and water connections",
-      "Parking space for guests",
-      "Assistance with event planning"
+      "Parking space for guests"
     ]
   },
   {
@@ -223,9 +216,9 @@ const amenities = [
     description: "Natural shade from palms and covered huts"
   },
   {
-    icon: Check,
-    title: "Music System",
-    description: "Sound system available for events"
+    icon: Music,
+    title: "DIY Music Ready",
+    description: "Space and power points for your own speakers"
   }
 ];
 
@@ -252,7 +245,7 @@ export default function FacilitiesPage() {
             </h1>
             
             <p className="mx-auto mt-6 max-w-2xl text-lg text-[var(--coconut-brown)] md:text-lg pt-4">
-              From modern swimming pools to rustic huts, professional catering to custom decorations — explore all the facilities and services that make Amthane Valley your ideal private farm retreat in Goa.
+              From modern swimming pools and lush plantations to DIY event spaces — explore the natural beauty and freedom that make Amthane Valley your ideal private farm retreat in Goa.
             </p>
           </div>
         </section>
