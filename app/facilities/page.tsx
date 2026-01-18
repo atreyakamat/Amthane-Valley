@@ -242,18 +242,18 @@ export default function FacilitiesPage() {
           </div>
           
           <div className="relative mx-auto max-w-4xl px-4 text-center md:px-8">
-            <div className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-4 py-2 text-sm font-medium uppercase tracking-[0.2em] text-white backdrop-blur-sm">
+            <div className="inline-flex items-center gap-2 rounded-full border border-forest/20 bg-white/90 px-4 py-2 text-sm font-medium uppercase tracking-[0.2em] text-forest backdrop-blur-sm">
               <Star className="h-4 w-4" />
               Facilities & Amenities
             </div>
-            
-            <h1 className="mt-6 text-4xl font-bold text-white md:text-6xl">
-              Everything You Need for the Perfect Celebration
-            </h1>
-            
-            <p className="mx-auto mt-6 max-w-2xl text-lg text-white/90 md:text-xl">
-              From modern swimming pools to rustic huts, professional catering to custom decorations — explore all the facilities and services that make Amthane Valley your ideal private farm retreat in Goa.
-            </p>
+            <div className="mt-6 inline-block w-full rounded-3xl bg-white/80 p-6 shadow-soft backdrop-blur-md md:p-10">
+              <h1 className="text-4xl font-bold text-forest md:text-6xl">
+                Everything You Need for the Perfect Celebration
+              </h1>
+              <p className="mx-auto mt-6 max-w-2xl text-lg text-forest-soft md:text-xl">
+                From modern swimming pools to rustic huts, professional catering to custom decorations — explore all the facilities and services that make Amthane Valley your ideal private farm retreat in Goa.
+              </p>
+            </div>
           </div>
         </section>
 
@@ -479,28 +479,29 @@ export default function FacilitiesPage() {
         {/* CTA Section */}
         <section className="section-spacing bg-gradient-to-br from-forest to-forest-soft">
           <div className="mx-auto max-w-4xl px-4 text-center md:px-8">
-            <div className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-4 py-2 text-sm font-medium uppercase tracking-[0.2em] text-white backdrop-blur-sm">
-              <Clock className="h-4 w-4" />
-              Ready to Book
-            </div>
-            
-            <h2 className="mt-6 text-3xl font-semibold text-white md:text-4xl">
-              Plan Your Perfect Day at Amthane Valley
-            </h2>
-            <p className="mx-auto mt-4 max-w-2xl text-lg text-white/90">
-              With all these facilities and services at your disposal, your celebration is guaranteed to be unforgettable. Book the entire farm for your special occasion.
-            </p>
-            <div className="mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row">
-              <Button asChild size="lg" variant="secondary" className="bg-white text-forest hover:bg-cream">
-                <Link href="/#contact">
-                  Check Availability
-                </Link>
-              </Button>
-              <Button asChild size="lg" variant="outline" className="border-white/30 text-white hover:bg-white/10">
-                <Link href="/stays">
-                  View Accommodations
-                </Link>
-              </Button>
+            <div className="inline-block w-full rounded-3xl bg-white/85 p-8 shadow-soft backdrop-blur-md">
+              <div className="inline-flex items-center gap-2 rounded-full border border-forest/20 bg-white/90 px-4 py-2 text-sm font-medium uppercase tracking-[0.2em] text-forest backdrop-blur-sm">
+                <Clock className="h-4 w-4" />
+                Ready to Book
+              </div>
+              <h2 className="mt-6 text-3xl font-semibold text-forest md:text-4xl">
+                Plan Your Perfect Day at Amthane Valley
+              </h2>
+              <p className="mx-auto mt-4 max-w-2xl text-lg text-forest-soft">
+                With all these facilities and services at your disposal, your celebration is guaranteed to be unforgettable. Book the entire farm for your special occasion.
+              </p>
+              <div className="mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row">
+                <Button asChild size="lg" variant="secondary" className="bg-white text-forest hover:bg-cream">
+                  <Link href="/#contact">
+                    Check Availability
+                  </Link>
+                </Button>
+                <Button asChild size="lg" variant="outline">
+                  <Link href="/stays">
+                    View Accommodations
+                  </Link>
+                </Button>
+              </div>
             </div>
           </div>
         </section>

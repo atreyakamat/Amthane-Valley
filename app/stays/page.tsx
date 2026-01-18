@@ -69,42 +69,43 @@ export default function StaysPage() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-4 py-2 text-sm font-medium uppercase tracking-[0.2em] text-white backdrop-blur-sm"
+            className="inline-flex items-center gap-2 rounded-full border border-forest/20 bg-white/90 px-4 py-2 text-sm font-medium uppercase tracking-[0.2em] text-forest backdrop-blur-sm"
           >
             <BedDouble className="h-4 w-4" />
             Accommodations
           </motion.div>
-          
-          <motion.h1
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.1 }}
-            className="mt-6 text-4xl font-bold text-white md:text-6xl"
-          >
-            Our Rooms & Stays
-          </motion.h1>
-          
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            className="mx-auto mt-6 max-w-2xl text-lg text-white/90 md:text-xl"
-          >
-            Choose from our thoughtfully designed accommodations — each offering comfort, tranquility, and the perfect retreat for your Susegad experience.
-          </motion.p>
+          <div className="mt-6 inline-block w-full rounded-3xl bg-white/80 p-6 shadow-soft backdrop-blur-md md:p-10">
+            <motion.h1
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.1 }}
+              className="text-4xl font-bold text-forest md:text-6xl"
+            >
+              Our Rooms & Stays
+            </motion.h1>
+            
+            <motion.p
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              className="mx-auto mt-6 max-w-2xl text-lg text-forest-soft md:text-xl"
+            >
+              Choose from our thoughtfully designed accommodations — each offering comfort, tranquility, and the perfect retreat for your Susegad experience.
+            </motion.p>
 
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.3 }}
-            className="mt-8"
-          >
-            <Button asChild size="lg" variant="secondary" className="bg-white text-forest hover:bg-cream">
-              <Link href="/#contact">
-                Book Your Stay
-              </Link>
-            </Button>
-          </motion.div>
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.3 }}
+              className="mt-8"
+            >
+              <Button asChild size="lg" variant="secondary" className="bg-white text-forest hover:bg-cream">
+                <Link href="/#contact">
+                  Book Your Stay
+                </Link>
+              </Button>
+            </motion.div>
+          </div>
         </div>
       </section>
 

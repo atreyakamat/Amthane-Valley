@@ -1,42 +1,21 @@
 "use client";
 
 import { motion } from "framer-motion";
-import Image from "next/image";
-import { allHeroImages } from "../../lib/images";
-import { useEffect, useState } from "react";
-
-const heroImages: string[] = allHeroImages;
 
 export function HeroSection() {
-  const [currentImage, setCurrentImage] = useState(0);
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentImage((prev) => (prev + 1) % heroImages.length);
-    }, 5000);
-    return () => clearInterval(interval);
-  }, []);
 
   return (
     <section id="hero" className="relative min-h-screen w-full">
-      {/* Background Image Carousel */}
-  {heroImages.map((img: string, index: number) => (
-        <div
-          key={`hero-${index}-${img}`}
-          className={`absolute inset-0 w-full h-full transition-opacity duration-1000 ${
-            index === currentImage ? "opacity-100" : "opacity-0"
-          }`}
-        >
-          <Image
-            src={img}
-            alt="Amthane Valley Farm"
-            fill
-            className="object-cover"
-            priority={index === 0}
-            unoptimized
-          />
-        </div>
-      ))}
+      {/* Background Video */}
+      <video
+        className="absolute inset-0 h-full w-full object-cover"
+        src="/amthane valley.webm"
+        autoPlay
+        muted
+        loop
+        playsInline
+        poster="/images/swimming-pool-1.JPG"
+      />
       
       {/* Gradient Overlay */}
       <div className="absolute inset-0 bg-gradient-to-t from-green-900/50 to-transparent"></div>
@@ -44,9 +23,9 @@ export function HeroSection() {
       <div className="relative z-10 flex flex-col min-h-screen">
         {/* Hero Content */}
         <main className="flex-grow flex items-center justify-center text-center px-4">
-          <div className="max-w-4xl">
+          <div className="max-w-4xl rounded-3xl bg-white/75 p-6 shadow-soft backdrop-blur-md md:p-10">
             <motion.h1
-              className="text-white text-5xl md:text-7xl font-black leading-tight tracking-tight"
+              className="text-forest text-5xl md:text-7xl font-black leading-tight tracking-tight"
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.4, duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
@@ -55,7 +34,7 @@ export function HeroSection() {
             </motion.h1>
 
             <motion.p
-              className="mt-6 text-lg text-white/90 md:text-m"
+              className="mt-6 text-lg text-forest-soft md:text-m"
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.6, duration: 0.8, ease: [0.22, 1, 0.36, 1] }}

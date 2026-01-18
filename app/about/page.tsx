@@ -28,18 +28,18 @@ export default function AboutPage() {
           </div>
           
           <div className="relative mx-auto max-w-4xl px-4 text-center md:px-8">
-            <div className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-4 py-2 text-sm font-medium uppercase tracking-[0.2em] text-white backdrop-blur-sm">
+            <div className="inline-flex items-center gap-2 rounded-full border border-forest/20 bg-white/90 px-4 py-2 text-sm font-medium uppercase tracking-[0.2em] text-forest backdrop-blur-sm">
               <Heart className="h-4 w-4" />
               Our Story
             </div>
-            
-            <h1 className="mt-6 text-4xl font-bold text-white md:text-6xl">
-              The Journey to Susegad
-            </h1>
-            
-            <p className="mx-auto mt-6 max-w-2xl text-lg text-white/90 md:text-xl">
-              From a family&apos;s dream of finding peace to becoming Goa&apos;s most cherished private farm retreat — this is the story of Amthane Valley.
-            </p>
+            <div className="mt-6 inline-block w-full rounded-3xl bg-white/80 p-6 shadow-soft backdrop-blur-md md:p-10">
+              <h1 className="text-4xl font-bold text-forest md:text-6xl">
+                The Journey to Susegad
+              </h1>
+              <p className="mx-auto mt-6 max-w-2xl text-lg text-forest-soft md:text-xl">
+                From a family&apos;s dream of finding peace to becoming Goa&apos;s most cherished private farm retreat — this is the story of Amthane Valley.
+              </p>
+            </div>
           </div>
         </section>
 
