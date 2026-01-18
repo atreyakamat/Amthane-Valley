@@ -56,24 +56,29 @@ export default function StaysPage() {
   return (
     <>
       <Navbar />
-      <div className="min-h-screen bg-background">
+      <div className="min-h-screen overflow-x-hidden bg-background">
         {/* Hero Section */}
-      <section className="relative overflow-hidden bg-gradient-to-br from-forest via-forest-soft to-forest py-20 md:py-32">
+      <section className="relative overflow-hidden bg-gradient-to-br from-forest via-forest-soft to-forest pt-28 pb-20 md:py-32">
         <div className="absolute inset-0 opacity-10">
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_50%,rgba(255,255,255,0.1),transparent_50%)]" />
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(255,255,255,0.08),transparent_50%)]" />
         </div>
         
-        <div className="relative mx-auto max-w-6xl px-4 text-center md:px-8">
+        <div className="relative mx-auto max-w-4xl px-4 text-center md:px-8 flex flex-col items-center pt-10">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
+<<<<<<< HEAD
             className="inline-flex items-center gap-2 rounded-full border border-forest/20 bg-white/90 px-4 py-2 text-sm font-medium uppercase tracking-[0.2em] text-forest backdrop-blur-sm"
+=======
+            className="inline-flex items-center gap-2 rounded-full bg-[var(--coconut-brown)]/40 shadow-[0_4px_10px_rgba(0,0,0,0.2)] px-4 py-2 text-sm font-medium uppercase tracking-[0.2em] text-white backdrop-blur-sm"
+>>>>>>> cdf2e46fd2f5504b94646d69a40e70f25eec874a
           >
-            <BedDouble className="h-4 w-4" />
+            <BedDouble className="h-4 w-4 text-[var(--coconut-brown)]" />
             Accommodations
           </motion.div>
+<<<<<<< HEAD
           <div className="mt-6 inline-block w-full rounded-3xl bg-white/80 p-6 shadow-soft backdrop-blur-md md:p-10">
             <motion.h1
               initial={{ opacity: 0, y: 20 }}
@@ -92,6 +97,26 @@ export default function StaysPage() {
             >
               Choose from our thoughtfully designed accommodations — each offering comfort, tranquility, and the perfect retreat for your Susegad experience.
             </motion.p>
+=======
+          
+          <motion.h1
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.1 }}
+            className="text-4xl font-bold text-[var(--forest-green)] md:text-6xl pb-3"
+          >
+            Our Rooms & Stays
+          </motion.h1>
+          
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="mx-auto mt-6 max-w-2xl text-lg text-[var(--coconut-brown)] md:text-xl"
+          >
+            Choose from our thoughtfully designed accommodations — each offering comfort, tranquility, and the perfect retreat for your Susegad experience.
+          </motion.p>
+>>>>>>> cdf2e46fd2f5504b94646d69a40e70f25eec874a
 
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -110,8 +135,8 @@ export default function StaysPage() {
       </section>
 
       {/* Introduction Section */}
-      <section className="section-spacing">
-        <div className="mx-auto max-w-4xl px-4 text-center md:px-8">
+      <section className="">
+        <div className="mx-auto max-w-4xl px-4 flex flex-col items-center text-center md:px-8 mb-4">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -121,7 +146,7 @@ export default function StaysPage() {
             <h2 className="text-3xl font-semibold text-forest md:text-4xl">
               Find Your Perfect Retreat
             </h2>
-            <p className="mx-auto max-w-2xl text-lg text-forest-muted">
+            <p className="mx-auto max-w-2xl text-lg text-forest-muted leading-snug">
               Each of our accommodations is thoughtfully designed to provide comfort and tranquility. Whether you&apos;re seeking a cozy getaway, luxurious comfort, or group lodging, we have the perfect space for your needs.
             </p>
           </motion.div>
@@ -129,7 +154,7 @@ export default function StaysPage() {
       </section>
 
       {/* Room Cards Section */}
-      <section className="section-spacing bg-cream-soft/40">
+      <section className="bg-cream-soft/40">
         <div className="mx-auto max-w-7xl px-4 md:px-8">
           <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
             {(Object.keys(roomCategories) as RoomType[]).map((roomType, index) => {
@@ -178,13 +203,12 @@ export default function StaysPage() {
                     <div className="mt-6 flex flex-col gap-3">
                       <Button
                         onClick={() => openGallery(roomType)}
-                        className="w-full justify-between"
-                        variant="outline"
+                        variant="secondary" className="bg-white text-forest border border-[var(--coconut-brown-dark)] hover:bg-cream w-full justify-between" 
                       >
                         View Gallery ({room.images.length} photos)
                         <ChevronRight className="h-4 w-4" />
                       </Button>
-                      <Button asChild className="w-full" variant="secondary">
+                      <Button asChild variant="secondary" className="bg-white border border-[var(--coconut-brown-dark)] text-forest hover:bg-cream" >
                         <a href="https://wa.me/919850000000" target="_blank" rel="noreferrer">
                           Check Availability
                         </a>
@@ -214,12 +238,12 @@ export default function StaysPage() {
               Book your stay at Amthane Valley and immerse yourself in the tranquil Goan countryside. Perfect for families, groups, and celebrations.
             </p>
             <div className="mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row">
-              <Button asChild size="lg">
+              <Button asChild size="lg" variant="outline" className="text-[var(--forest-soft)]">
                 <Link href="/#contact">
                   Plan Your Visit
                 </Link>
               </Button>
-              <Button asChild size="lg" variant="outline">
+              <Button asChild size="lg" variant="outline" className="bg-[var(--coconut-brown-soft)]/40">
                 <Link href="/">
                   Back to Home
                 </Link>

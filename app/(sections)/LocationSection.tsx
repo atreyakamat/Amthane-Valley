@@ -8,7 +8,7 @@ import { Button } from "../../components/ui/button";
 
 export function LocationSection() {
   return (
-    <section id="location" className="section-spacing bg-cream-soft/70">
+    <section id="location" className="bg-cream-soft/70">
   <div className="mx-auto grid max-w-6xl gap-10 px-4 md:grid-cols-[1.05fr_0.95fr] md:px-8">
         <motion.div
           className="overflow-hidden rounded-[2rem] bg-white shadow-soft"

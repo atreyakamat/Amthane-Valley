@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 
 export function HeroSection() {
+<<<<<<< HEAD
 
   return (
     <section id="hero" className="relative min-h-screen w-full">
@@ -16,16 +17,39 @@ export function HeroSection() {
         playsInline
         poster="/images/swimming-pool-1.JPG"
       />
+=======
+  return (
+    <section id="hero" className="relative min-h-screen w-full overflow-hidden">
+      {/* Background Video */}
+      <video
+        autoPlay
+        loop
+        muted
+        playsInline
+        className="absolute inset-0 h-full w-full object-cover"
+      >
+        <source src="/amthane valley.webm" type="video/webm" />
+        {/* Fallback message for browsers that don't support video */}
+        Your browser does not support the video tag.
+      </video>
+>>>>>>> cdf2e46fd2f5504b94646d69a40e70f25eec874a
       
       {/* Gradient Overlay */}
-      <div className="absolute inset-0 bg-gradient-to-t from-green-900/50 to-transparent"></div>
+      <div className="absolute inset-0 bg-gradient-to-t from-green-900/60 via-green-900/30 to-transparent"></div>
       
-      <div className="relative z-10 flex flex-col min-h-screen">
+      <div className="relative z-10 flex flex-col min-h-screen pt-20 md:pt-0">
         {/* Hero Content */}
+<<<<<<< HEAD
         <main className="flex-grow flex items-center justify-center text-center px-4">
           <div className="max-w-4xl rounded-3xl bg-white/75 p-6 shadow-soft backdrop-blur-md md:p-10">
             <motion.h1
               className="text-forest text-5xl md:text-7xl font-black leading-tight tracking-tight"
+=======
+        <main className="flex-grow flex items-center justify-center text-center px-4 sm:px-6 md:px-8">
+          <div className="max-w-4xl w-full">
+            <motion.h1
+              className="text-white text-5xl md:text-6xl font-black leading-tight tracking-tight md:pt-20"
+>>>>>>> cdf2e46fd2f5504b94646d69a40e70f25eec874a
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.4, duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
@@ -48,9 +72,9 @@ export function HeroSection() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.85, duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
             >
-              <button className="flex w-full sm:w-auto min-w-[200px] max-w-sm cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 px-5 bg-primary text-background-dark text-base font-bold tracking-wide hover:bg-primary/90 transition-colors">
+              {/* <button className="flex w-full sm:w-auto min-w-[200px] max-w-sm cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 px-5 bg-primary text-white text-base font-bold tracking-wide hover:bg-primary/90 transition-colors">
                 <span className="truncate">Discover Your Susegad Escape</span>
-              </button>
+              </button> */}
             </motion.div>
           </div>
         </main>

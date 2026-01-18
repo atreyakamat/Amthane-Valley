@@ -29,10 +29,10 @@ export function Footer() {
             </p>
             <div className="flex flex-wrap gap-4 text-sm text-cream/80">
               <span className="inline-flex items-center gap-2">
-                <Phone className="h-4 w-4" aria-hidden /> +91 98500 00000
+                <Phone className="h-4 w-4" aria-hidden /> +91 9422740111
               </span>
               <span className="inline-flex items-center gap-2">
-                <Mail className="h-4 w-4" aria-hidden /> hello@amthanevalley.com
+                <Mail className="h-4 w-4" aria-hidden /> amthanevalley462@gmail.com
               </span>
             </div>
           </div>
@@ -55,7 +55,7 @@ export function Footer() {
                 <Link
                   aria-label="Visit our Instagram"
                   href="https://www.instagram.com"
-                  className="inline-flex h-10 w-10 items-center justify-center rounded-full bg-white/10 text-white transition hover:bg-white/20"
+                  className="inline-flex h-10 w-10 items-center justify-center rounded-full bg-white/10 text-[var(--coconut-brown)] transition hover:bg-white/20"
                   target="_blank"
                 >
                   <Instagram className="h-5 w-5" aria-hidden />
@@ -63,7 +63,7 @@ export function Footer() {
                 <Link
                   aria-label="Visit our Facebook"
                   href="https://www.facebook.com"
-                  className="inline-flex h-10 w-10 items-center justify-center rounded-full bg-white/10 text-white transition hover:bg-white/20"
+                  className="inline-flex h-10 w-10 items-center justify-center rounded-full bg-white/10 text-[var(--coconut-brown)] transition hover:bg-white/20"
                   target="_blank"
                 >
                   <Facebook className="h-5 w-5" aria-hidden />

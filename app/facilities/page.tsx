@@ -11,7 +11,6 @@ import {
   Waves, 
   Droplets, 
   TreePalm, 
-  Utensils, 
   Music, 
   Sparkles, 
   Check,
@@ -24,7 +23,7 @@ import {
 export const metadata: Metadata = {
   title: "Facilities & Amenities | Amthane Valley Farm",
   description:
-    "Explore our modern swimming pool, natural seasonal pool, rustic huts, lush lawns, professional catering, event spaces, and custom decoration services. Everything you need for the perfect celebration in Goa.",
+    "Explore our modern swimming pool, natural seasonal pool, rustic huts, lush lawns, plantations, and versatile event spaces. Experience the beauty of Amthane Dam in a private Goan retreat.",
 };
 
 const mainFacilities = [
@@ -86,44 +85,39 @@ const mainFacilities = [
 
 const services = [
   {
-    id: "catering",
-    icon: Utensils,
-    name: "Professional Catering Services",
-    tagline: "Goan Flavors & Custom Menus",
-    description: "From authentic Goan seafood to North Indian vegetarian feasts, our catering partners create memorable culinary experiences. Every meal is customized to your preferences and dietary requirements.",
-    image: images.pool2,
+    id: "farm-setup",
+    icon: TreePalm,
+    name: "The Farm & DIY Setup",
+    tagline: "Your Vision, Our Natural Backdrop",
+    description: "We provide the stunning canvas — you bring the flavor. Experience our thriving plantations and the pure water of Amthane Dam, with full freedom to set up your celebration exactly how you like it.",
+    image: images.pool4,
     offerings: [
       {
-        name: "Traditional Goan Cuisine",
-        details: "Fish curry rice, prawn balchão, chicken xacuti, bebinca, and more"
+        name: "Lush Plantations",
+        details: "Explore acres of coconut, arecanut, and cashew trees that define our landscape"
       },
       {
-        name: "BBQ & Grills",
-        details: "Poolside BBQ setups with meats, seafood, and vegetables"
+        name: "Dam Freshwater",
+        details: "Natural, sweet water sourced directly from the pristine Amthane Dam"
       },
       {
-        name: "Vegetarian Delights",
-        details: "Complete vegetarian menus from various cuisines"
+        name: "BYO Grill & BBQ",
+        details: "Ample space for you to set up your own BBQ grills for a poolside feast"
       },
       {
-        name: "Breakfast Spreads",
-        details: "Continental, Indian, or custom breakfast options"
+        name: "Speaker Setup",
+        details: "Guests are welcome to bring and set up their own speakers and sound systems"
       },
       {
-        name: "Snacks & Starters",
-        details: "Chaats, pakodas, kebabs, finger foods for parties"
-      },
-      {
-        name: "Beverages",
-        details: "Fresh juices, mocktails, tea/coffee setups"
+        name: "Open Catering Policy",
+        details: "Freedom to bring your own food or hire external caterers of your choice"
       }
     ],
     customization: [
-      "Customize menu to your preferences",
-      "Accommodate dietary restrictions",
-      "Flexible serving styles (buffet/plated)",
-      "Professional service staff included",
-      "Setup and cleanup handled"
+      "No restriction on external vendors",
+      "Multiple power outlets for your equipment",
+      "Spacious layouts for custom setups",
+      "Natural shade from the fruit-bearing canopy"
     ]
   },
   {
@@ -148,8 +142,7 @@ const services = [
       "Flexible timing arrangements",
       "Basic furniture and seating",
       "Electricity and water connections",
-      "Parking space for guests",
-      "Assistance with event planning"
+      "Parking space for guests"
     ]
   },
   {
@@ -223,9 +216,9 @@ const amenities = [
     description: "Natural shade from palms and covered huts"
   },
   {
-    icon: Check,
-    title: "Music System",
-    description: "Sound system available for events"
+    icon: Music,
+    title: "DIY Music Ready",
+    description: "Space and power points for your own speakers"
   }
 ];
 
@@ -233,34 +226,35 @@ export default function FacilitiesPage() {
   return (
     <>
       <Navbar />
-      <div className="min-h-screen bg-background">
+      <div className="min-h-screen overflow-x-hidden bg-background">
         {/* Hero Section */}
-        <section className="relative overflow-hidden bg-gradient-to-br from-forest via-forest-soft to-forest py-20 md:py-32">
+        <section className="relative overflow-hidden bg-gradient-to-br from-forest via-forest-soft to-forest pt-28 pb-20 md:py-32">
           <div className="absolute inset-0 opacity-10">
             <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_50%,rgba(255,255,255,0.1),transparent_50%)]" />
             <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(255,255,255,0.08),transparent_50%)]" />
           </div>
           
           <div className="relative mx-auto max-w-4xl px-4 text-center md:px-8">
-            <div className="inline-flex items-center gap-2 rounded-full border border-forest/20 bg-white/90 px-4 py-2 text-sm font-medium uppercase tracking-[0.2em] text-forest backdrop-blur-sm">
+            <div className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-4 py-2 text-sm font-medium uppercase tracking-[0.2em] text-white backdrop-blur-sm">
               <Star className="h-4 w-4" />
               Facilities & Amenities
             </div>
-            <div className="mt-6 inline-block w-full rounded-3xl bg-white/80 p-6 shadow-soft backdrop-blur-md md:p-10">
-              <h1 className="text-4xl font-bold text-forest md:text-6xl">
-                Everything You Need for the Perfect Celebration
-              </h1>
-              <p className="mx-auto mt-6 max-w-2xl text-lg text-forest-soft md:text-xl">
-                From modern swimming pools to rustic huts, professional catering to custom decorations — explore all the facilities and services that make Amthane Valley your ideal private farm retreat in Goa.
-              </p>
-            </div>
+            
+            <h1 className="mt-6 text-4xl font-bold text-white md:text-6xl">
+              Everything You Need for the Perfect Celebration
+            </h1>
+            
+            <p className="mx-auto mt-6 max-w-2xl text-lg text-white/90 md:text-xl">
+              From modern swimming pools to rustic huts, professional catering to custom decorations — explore all the facilities and services that make Amthane Valley your ideal private farm retreat in Goa.
+            </p>
           </div>
         </section>
 
         {/* Main Facilities */}
-        <section className="section-spacing">
-          <div className="mx-auto max-w-6xl space-y-16 px-4 md:px-8">
-            <div className="text-center">
+        <section className="">
+          <div className="mx-auto max-w-5xl space-y-12 px-4 md:px-8">
+            {/* Introduction */}
+            <div className="flex flex-col items-center text-center">
               <div className="flex items-center justify-center gap-4">
                 <LeafIcon className="h-8 w-8 text-forest" />
                 <h2 className="text-3xl font-semibold text-forest md:text-4xl">
@@ -268,7 +262,7 @@ export default function FacilitiesPage() {
                 </h2>
                 <LeafIcon className="h-8 w-8 rotate-180 text-forest" />
               </div>
-              <p className="mx-auto mt-4 max-w-2xl text-lg text-forest-muted">
+              <p className="mx-auto mt-6 max-w-3xl text-lg text-forest-muted">
                 Three unique spaces, each offering a different way to experience Amthane Valley
               </p>
             </div>
@@ -332,7 +326,7 @@ export default function FacilitiesPage() {
         {/* Services */}
         <section className="section-spacing bg-cream-soft/60">
           <div className="mx-auto max-w-6xl space-y-16 px-4 md:px-8">
-            <div className="text-center">
+            <div className="flex flex-col text-center items-center">
               <h2 className="text-3xl font-semibold text-forest md:text-4xl">
                 Complete Event Services
               </h2>
@@ -453,7 +447,7 @@ export default function FacilitiesPage() {
         {/* Amenities */}
         <section className="section-spacing">
           <div className="mx-auto max-w-6xl px-4 md:px-8">
-            <div className="text-center">
+            <div className="flex flex-col text-center items-center">
               <h2 className="text-3xl font-semibold text-forest md:text-4xl">
                 Essential Amenities
               </h2>
@@ -477,31 +471,30 @@ export default function FacilitiesPage() {
         </section>
 
         {/* CTA Section */}
-        <section className="section-spacing bg-gradient-to-br from-forest to-forest-soft">
+        <section className="relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen bg-white/90 p-10 flex flex-col items-center text-center shadow-soft md:p-12">
           <div className="mx-auto max-w-4xl px-4 text-center md:px-8">
-            <div className="inline-block w-full rounded-3xl bg-white/85 p-8 shadow-soft backdrop-blur-md">
-              <div className="inline-flex items-center gap-2 rounded-full border border-forest/20 bg-white/90 px-4 py-2 text-sm font-medium uppercase tracking-[0.2em] text-forest backdrop-blur-sm">
-                <Clock className="h-4 w-4" />
-                Ready to Book
-              </div>
-              <h2 className="mt-6 text-3xl font-semibold text-forest md:text-4xl">
-                Plan Your Perfect Day at Amthane Valley
-              </h2>
-              <p className="mx-auto mt-4 max-w-2xl text-lg text-forest-soft">
-                With all these facilities and services at your disposal, your celebration is guaranteed to be unforgettable. Book the entire farm for your special occasion.
-              </p>
-              <div className="mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row">
-                <Button asChild size="lg" variant="secondary" className="bg-white text-forest hover:bg-cream">
-                  <Link href="/#contact">
-                    Check Availability
-                  </Link>
-                </Button>
-                <Button asChild size="lg" variant="outline">
-                  <Link href="/stays">
-                    View Accommodations
-                  </Link>
-                </Button>
-              </div>
+            <div className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-4 py-2 text-sm font-medium uppercase tracking-[0.2em] text-white backdrop-blur-sm">
+              <Clock className="h-4 w-4" />
+              Ready to Book
+            </div>
+            
+            <h2 className="mt-6 text-3xl font-semibold text-white md:text-4xl">
+              Plan Your Perfect Day at Amthane Valley
+            </h2>
+            <p className="mx-auto mt-4 max-w-2xl text-lg text-white/90">
+              With all these facilities and services at your disposal, your celebration is guaranteed to be unforgettable. Book the entire farm for your special occasion.
+            </p>
+            <div className="mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row">
+              <Button asChild size="lg" variant="secondary" className="bg-white text-forest hover:bg-cream">
+                <Link href="/#contact">
+                  Check Availability
+                </Link>
+              </Button>
+              <Button asChild size="lg" variant="outline" className="border-white/30 text-white hover:bg-white/10">
+                <Link href="/stays">
+                  View Accommodations
+                </Link>
+              </Button>
             </div>
           </div>
         </section>
