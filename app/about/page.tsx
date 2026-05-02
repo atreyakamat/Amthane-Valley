@@ -27,7 +27,6 @@ export default function AboutPage() {
             <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(255,255,255,0.08),transparent_50%)]" />
           </div>
           
-<<<<<<< HEAD
           <div className="relative mx-auto max-w-4xl px-4 text-center md:px-8">
             <div className="inline-flex items-center gap-2 rounded-full border border-forest/20 bg-white/90 px-4 py-2 text-sm font-medium uppercase tracking-[0.2em] text-forest backdrop-blur-sm">
               <Heart className="h-4 w-4" />
@@ -41,21 +40,6 @@ export default function AboutPage() {
                 From a family&apos;s dream of finding peace to becoming Goa&apos;s most cherished private farm retreat — this is the story of Amthane Valley.
               </p>
             </div>
-=======
-          <div className="relative mx-auto max-w-4xl px-4 text-center md:px-8 flex flex-col items-center pt-10">
-            <div className="inline-flex items-center gap-2 rounded-full bg-[var(--coconut-brown)]/40 shadow-[0_4px_10px_rgba(0,0,0,0.2)] px-4 py-2 text-sm font-medium uppercase tracking-[0.2em] text-white backdrop-blur-sm">
-              <Heart className="h-4 w-4 text-pink-400 fill-pink-400" />
-              Our Story
-            </div>
-            
-            <h1 className="text-4xl font-bold text-[var(--forest-green)] md:text-6xl pb-3">
-              The Journey to Susegad
-            </h1>
-            
-            <p className="mx-auto mt-6 max-w-2xl text-lg text-[var(--coconut-brown)] md:text-lg">
-              From a family&apos;s dream of finding peace to becoming Goa&apos;s most cherished private farm retreat — this is the story of Amthane Valley.
-            </p>
->>>>>>> cdf2e46fd2f5504b94646d69a40e70f25eec874a
           </div>
         </section>
 

@@ -69,16 +69,11 @@ export default function StaysPage() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-<<<<<<< HEAD
             className="inline-flex items-center gap-2 rounded-full border border-forest/20 bg-white/90 px-4 py-2 text-sm font-medium uppercase tracking-[0.2em] text-forest backdrop-blur-sm"
-=======
-            className="inline-flex items-center gap-2 rounded-full bg-[var(--coconut-brown)]/40 shadow-[0_4px_10px_rgba(0,0,0,0.2)] px-4 py-2 text-sm font-medium uppercase tracking-[0.2em] text-white backdrop-blur-sm"
->>>>>>> cdf2e46fd2f5504b94646d69a40e70f25eec874a
           >
             <BedDouble className="h-4 w-4 text-[var(--coconut-brown)]" />
             Accommodations
           </motion.div>
-<<<<<<< HEAD
           <div className="mt-6 inline-block w-full rounded-3xl bg-white/80 p-6 shadow-soft backdrop-blur-md md:p-10">
             <motion.h1
               initial={{ opacity: 0, y: 20 }}
@@ -97,26 +92,6 @@ export default function StaysPage() {
             >
               Choose from our thoughtfully designed accommodations — each offering comfort, tranquility, and the perfect retreat for your Susegad experience.
             </motion.p>
-=======
-          
-          <motion.h1
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.1 }}
-            className="text-4xl font-bold text-[var(--forest-green)] md:text-6xl pb-3"
-          >
-            Our Rooms & Stays
-          </motion.h1>
-          
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            className="mx-auto mt-6 max-w-2xl text-lg text-[var(--coconut-brown)] md:text-xl"
-          >
-            Choose from our thoughtfully designed accommodations — each offering comfort, tranquility, and the perfect retreat for your Susegad experience.
-          </motion.p>
->>>>>>> cdf2e46fd2f5504b94646d69a40e70f25eec874a
 
             <motion.div
               initial={{ opacity: 0, y: 20 }}
